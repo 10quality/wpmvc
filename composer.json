@@ -1,0 +1,22 @@
+{
+    "name": "amostajo/wordpress-plugin-core",
+    "description": "Core functionality and libraries for Wordpress Plugin (a light weight plugin template with composer and MVC).",
+    "license": "MIT",
+    "keywords": ["wordpress plugin","plugin","wordpress","code"],
+    "authors": [
+        {
+            "name": "Alejandro Mostajo",
+            "email": "amostajo@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "amostajo/lightweight-mvc": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Amostajo\\WPPluginCore\\": "src"
+        }
+    },
+    "minimum-stability": "dev"
+}
