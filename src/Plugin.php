@@ -41,4 +41,15 @@ abstract class Plugin
 			$this->config->get('namespace')
 		);
 	}
+
+	/**
+	 * Displays view with the parameters passed by.
+	 *
+	 * @param string $view   Name and location of the view within "theme/views" path.
+	 * @param array  $params View parameters passed by.
+	 */
+	public function view ( $view, $params = array() )
+	{
+		$this->mvc->view->show( $view, $params )
+	}
 }
