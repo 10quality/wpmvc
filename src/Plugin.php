@@ -50,6 +50,6 @@ abstract class Plugin
 	 */
 	public function view ( $view, $params = array() )
 	{
-		$this->mvc->view->show( $view, $params )
+		$this->mvc->view->show( $view, $params );
 	}
 }
