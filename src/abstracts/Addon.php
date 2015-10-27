@@ -33,18 +33,16 @@ abstract class Addon implements Plugable
      * Default constructor.
      * @since 1.0
      *
-     * @param string $key  Addon full class name.
      * @param object $main Plugin object.
      */
-    public function __construct( $key, $main )
+    public function __construct( $main )
     {
-        $namespace = explode( '\\', $key );
-        unset( $namespace[count( $namespace ) -1] );
+        $reflection = new ReflectionClass($this);
         $this->main = $main;
         $this->mvc = new Engine(
-            __DIR__ . '/views/',
-            __DIR__ . '/controllers/',
-            implode( '\\', $namespace )
+            dirname( $reflection->getFileName() ) . '/views/',
+            dirname( $reflection->getFileName() ) . '/controllers/',
+            $reflection->getNamespaceName()
         );
     }
 
@@ -56,7 +54,7 @@ abstract class Addon implements Plugable
      *
      * @return void
      */
-    public function init( &$main  )
+    public function init()
     {
         // TODO custom code.
     }
@@ -69,7 +67,7 @@ abstract class Addon implements Plugable
      *
      * @return void
      */
-    public function on_admin( &$main )
+    public function on_admin()
     {
         // TODO custom code.
     }

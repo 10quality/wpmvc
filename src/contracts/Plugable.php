@@ -18,7 +18,7 @@ interface Plugable
      * @since 1.0
      * @param object &$main Main plugin object as reference.
      */
-    public function init( &$main );
+    public function init();
 
     /**
      * Called on Plugin's on_admin function.
@@ -26,5 +26,5 @@ interface Plugable
      * @since 1.0
      * @param object &$main Main plugin object as reference.
      */
-    public function on_admin( &$main );
+    public function on_admin();
 }

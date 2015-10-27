@@ -15,7 +15,7 @@ use Amostajo\LightweightMVC\Engine as Engine;
  * @package Amostajo\WPPluginCore
  * @version 1.2
  */
-abstract class Plugin
+abstract class Plugin implements Plugable
 {
 	/**
 	 * Configuration file.
@@ -107,8 +107,8 @@ abstract class Plugin
 	protected function set_addons()
 	{
 		if ( $this->config->get( 'addons' ) ) {
-			foreach ( $addons as $addon ) {
-				$addons[] = new $addon( $addon, $this );
+			foreach ( $this->config->get( 'addons' ) as $addon ) {
+				$this->addons[] = new $addon( $this );
 			}
 		}
 	}
@@ -137,7 +137,7 @@ abstract class Plugin
 		$this->init();
 		// Addons
 		for ( $i = count( $this->addons ) - 1; $i >= 0; --$i ) {
-			$this->addons[$i]->init( $this );
+			$this->addons[$i]->init();
 		}
 	}
 
@@ -151,7 +151,7 @@ abstract class Plugin
 		$this->on_admin();
 		// Addons
 		for ( $i = count( $this->addons ) - 1; $i >= 0; --$i ) {
-			$this->addons[$i]->on_admin( $this );
+			$this->addons[$i]->on_admin();
 		}
 	}
 

@@ -17,21 +17,20 @@ Add
 
 to your composer.json. Then run `composer install` or `composer update`.
 
-## Addon development
+## Add-on development
 
-WP Core now supports Addon development. To create your custom package, simply create an Addon main class that extends from this package abstract, like the following example:
+WP Core now supports Add-on development. To create your custom package, simply create an Add-on main class that extends from this package abstract, like the following example:
 
 ```php
-use Amostajo\WPPluginCore\Abstracts\Addon;
+use Amostajo\WPPluginCore\Abstracts\Add-on;
 
-class PostPicker extends Addon
+class PostPicker extends Add-on
 {
     /**
      * Function called when plugin or theme starts.
      * Add wordpress hooks (actions, filters) here.
-     * @param object &$main Main class plugin (required!).
      */
-    public function init( &$main )
+    public function init()
     {
         // YOUR CUSTOM CODE HERE.
     }
@@ -39,9 +38,8 @@ class PostPicker extends Addon
     /**
      * Function called when user is on admin dashboard.
      * Add wordpress hooks (actions, filters) here.
-     * @param object &$main Main class plugin (required!).
      */
-    public function on_admin( &$main )
+    public function on_admin()
     {
         // YOUR CUSTOM CODE HERE.
     }
@@ -51,22 +49,21 @@ class PostPicker extends Addon
 This is how you should add your Wordpress hooks:
 
 ```php
-use Amostajo\WPPluginCore\Abstracts\Addon;
+use Amostajo\WPPluginCore\Abstracts\Add-on;
 
-class PostPicker extends Addon
+class PostPicker extends Add-on
 {
     /**
      * Function called when plugin or theme starts.
      * Add wordpress hooks (actions, filters) here.
      */
-    public function init( &$main )
+    public function init()
     {
-        add_filter( 'post_content', [ &$main, 'addon_picker_filter' ] )
+        add_filter( 'post_content', [ &$this, 'picker_filter' ] )
     }
 
     /**
-     * Function called by Plugin / Theme main class.
-     * This is the function declared on the INIT function "addon_picker_filter"
+     * Called by wordpress.
      */
     public function picker_filter()
     {
@@ -75,9 +72,7 @@ class PostPicker extends Addon
 }
 ```
 
-In the example above, the `Main` class will look for the method called `picker_filter` because it has the prefix `addon_picker`.
-
-You can call the main class from any custom method in your `Addon` class, like this:
+You can call the main class from any custom method in your `Add-on` class, like this:
 
 ```php
 /**
@@ -90,7 +85,7 @@ public function picker_filter()
 }
 ```
 
-Calling for Addon's controllers or views:
+Calling for Add-on's controllers or views:
 
 ```php
 /**
@@ -103,7 +98,9 @@ public function picker_filter()
 }
 ```
 
-Your controllers should be placed in a `controllers` folder on the same level as your `Addon` class, same for the `views` folder.
+Your controllers should be placed in a `controllers` folder on the same level as your `Add-on` class, same for the `views` folder.
+
+The `Main` class can call methods in the Add-on by adding the `addon_` prefic, like for example `addon_picker_filter`.
 
 ## Coding Guidelines
 
