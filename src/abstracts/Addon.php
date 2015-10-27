@@ -2,6 +2,7 @@
 
 namespace Amostajo\WPPluginCore\Abstracts;
 
+use ReflectionClass;
 use Amostajo\WPPluginCore\Contracts\Plugable;
 use Amostajo\LightweightMVC\Engine as Engine;
 

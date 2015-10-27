@@ -54,6 +54,8 @@ This is how you should add your Wordpress hooks:
 namespace MyNamespace;
 
 use Amostajo\WPPluginCore\Abstracts\Addon;
+
+class PostPicker extends Addon
 {
     /**
      * Function called when plugin or theme starts.
