@@ -51,9 +51,12 @@ abstract class Addon implements Plugable
     /**
      * Called on init.
      * @since 1.0
+     *
+     * @param object &$main Main plugin object as reference.
+     *
      * @return void
      */
-    public function init()
+    public function init( &$main  )
     {
         // TODO custom code.
     }
@@ -61,9 +64,12 @@ abstract class Addon implements Plugable
     /**
      * Called on admin.
      * @since 1.0
+     *
+     * @param object &$main Main plugin object as reference.
+     *
      * @return void
      */
-    public function on_admin()
+    public function on_admin( &$main )
     {
         // TODO custom code.
     }

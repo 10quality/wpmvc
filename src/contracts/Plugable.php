@@ -16,13 +16,15 @@ interface Plugable
     /**
      * Called on Plugin's init function.
      * @since 1.0
+     * @param object &$main Main plugin object as reference.
      */
-    public function init();
+    public function init( &$main );
 
     /**
      * Called on Plugin's on_admin function.
      * Admin Dashboard.
      * @since 1.0
+     * @param object &$main Main plugin object as reference.
      */
-    public function on_admin();
+    public function on_admin( &$main );
 }
