@@ -8,30 +8,34 @@ namespace Amostajo\WPPluginCore;
  *
  * @author Alejandro Mostajo
  * @license MIT
- * @package Amostajo\LightweightMVC
+ * @package Amostajo\WPPluginCore
+ * @version 1.0
  */
 class Config
 {
 	/**
 	 * Raw config array.
 	 * @var array
+	 * @since 1.0
 	 */
 	protected $raw;
 
 	/**
 	 * Constructor.
+	 * @since 1.0
 	 *
 	 * @param array $raw Raw config array.
 	 */
 	public function __construct( $raw )
 	{
-		$this->raw = $raw;		
+		$this->raw = $raw;
 	}
 
 	/**
 	 * Returns value stored in given key.
 	 * Can acces multidimenssional array values with a DOT(.)
 	 * i.e. paypal.client_id
+	 * @since 1.0
 	 *
 	 * @param string $key Key.
 	 * @param string $sub Child array
