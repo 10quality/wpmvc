@@ -22,9 +22,11 @@ to your composer.json. Then run `composer install` or `composer update`.
 WP Core now supports Add-on development. To create your custom package, simply create an Add-on main class that extends from this package abstract, like the following example:
 
 ```php
-use Amostajo\WPPluginCore\Abstracts\Add-on;
+namespace MyNamespace;
 
-class PostPicker extends Add-on
+use Amostajo\WPPluginCore\Abstracts\Addon;
+
+class PostPicker extends Addon
 {
     /**
      * Function called when plugin or theme starts.
@@ -49,9 +51,9 @@ class PostPicker extends Add-on
 This is how you should add your Wordpress hooks:
 
 ```php
-use Amostajo\WPPluginCore\Abstracts\Add-on;
+namespace MyNamespace;
 
-class PostPicker extends Add-on
+use Amostajo\WPPluginCore\Abstracts\Addon;
 {
     /**
      * Function called when plugin or theme starts.
@@ -72,6 +74,8 @@ class PostPicker extends Add-on
 }
 ```
 
+### Accessing the plugin Main class
+
 You can call the main class from any custom method in your `Add-on` class, like this:
 
 ```php
@@ -87,6 +91,9 @@ public function picker_filter()
 
 Calling for Add-on's controllers or views:
 
+
+### MVC
+
 ```php
 /**
  * Custom method.
@@ -100,7 +107,19 @@ public function picker_filter()
 
 Your controllers should be placed in a `controllers` folder on the same level as your `Add-on` class, same for the `views` folder.
 
+### Calling ADD-ON methods from main class
+
 The `Main` class can call methods in the Add-on by adding the `addon_` prefic, like for example `addon_picker_filter`.
+
+### Setup plugin or theme
+
+Finally add your package in the configuration file. For example:
+
+```php
+    'addons' => [
+        'MyNamespace\PostPicker',
+    ],
+```
 
 ## Coding Guidelines
 
