@@ -14,8 +14,11 @@
         "amostajo/lightweight-mvc": "1.0.*"
     },
     "autoload": {
+        "files": [
+            "src/lib/functions.php"
+        ],
         "psr-4": {
-            "Amostajo\\WPPluginCore\\": "src"
+            "Amostajo\\WPPluginCore\\": "src/psr4"
         }
     },
     "minimum-stability": "dev"
