@@ -55,7 +55,8 @@ abstract class Plugin implements Plugable
 		);
 		$this->addons = array();
 		$this->set_addons();
-		Cache::init( $this->config );
+		if ( $this->config->get( 'cache' ) )
+			Cache::init( $this->config );
 	}
 
 	/**

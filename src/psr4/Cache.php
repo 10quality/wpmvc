@@ -27,7 +27,9 @@ class Cache implements Cacheable
 	 */
 	public function __construct( $config )
 	{
-		if ( ! isset( self::$fastcache ) ) {
+		if ( ! isset( self::$fastcache )
+			&& $config->get( 'cache' )
+		) {
 			// Create folder
 			if ( ( $config->get( 'cache.storage' ) == 'auto'
 				|| $config->get( 'cache.storage' ) == 'files' )
