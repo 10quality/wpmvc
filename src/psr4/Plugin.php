@@ -3,7 +3,7 @@
 namespace Amostajo\WPPluginCore;
 
 use Amostajo\WPPluginCore\Contracts\Plugable;
-use Amostajo\LightweightMVC\Engine as Engine;
+use Amostajo\LightweightMVC\Engine;
 
 /**
  * Plugin class.

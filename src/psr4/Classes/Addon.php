@@ -1,10 +1,10 @@
 <?php
 
-namespace Amostajo\WPPluginCore\Abstracts;
+namespace Amostajo\WPPluginCore\Classes;
 
 use ReflectionClass;
 use Amostajo\WPPluginCore\Contracts\Plugable;
-use Amostajo\LightweightMVC\Engine as Engine;
+use Amostajo\LightweightMVC\Engine;
 
 /**
  * Addon abstract class.

@@ -24,7 +24,7 @@ WP Core now supports Add-on development. To create your custom package, simply c
 ```php
 namespace MyNamespace;
 
-use Amostajo\WPPluginCore\Abstracts\Addon;
+use Amostajo\WPPluginCore\Classes\Addon;
 
 class PostPicker extends Addon
 {
@@ -53,7 +53,7 @@ This is how you should add your Wordpress hooks:
 ```php
 namespace MyNamespace;
 
-use Amostajo\WPPluginCore\Abstracts\Addon;
+use Amostajo\WPPluginCore\Classes\Addon;
 
 class PostPicker extends Addon
 {
