@@ -32,7 +32,7 @@ class Log implements Loggable
 			&& $config->get( 'log' )
 		) {
 			// Create folder
-			if ( ! is_dir( $config->get( 'log.path' ) ) {
+			if ( ! is_dir( $config->get( 'log.path' ) ) ) {
 				mkdir( $config->get( 'log.path' ), 0777, true );
 			}
 			// Init logger
