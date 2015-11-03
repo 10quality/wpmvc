@@ -2,6 +2,7 @@
 
 namespace Amostajo\WPPluginCore;
 
+use Closure;
 use phpFastCache;
 use Amostajo\WPPluginCore\Contracts\Cacheable;
 
@@ -112,23 +113,24 @@ class Cache implements Cacheable
 	 * Returns the value of a given key.
 	 * If it doesn't exist, then the value pass by is returned.
 	 * @since 1.0
-	 * @param string $key     Main plugin object as reference.
-	 * @param int  	 $expires Expiration time in minutes.
-	 * @param mixed  $value   Value to cache.
+	 * @param string  $key     Main plugin object as reference.
+	 * @param int  	  $expires Expiration time in minutes.
+	 * @param Closure $value   Value to cache.
 	 * @return mixed
 	 */
-	public static function remember( $key, $expires, $value )
+	public static function remember( $key, $expires, Closure $closure )
 	{
 		$cache = self::instance();
 		if ( $cache ) {
 			if ( $cache->isExisting( $key ) ) {
 				return $cache->get( $key );
-			} else if ( $value != null ) {
+			} else if ( $closure != null ) {
+				$value = $closure();
 				$cache->set( $key, $value, $expires * 60 );
 				return $value;
 			}
 		}
-		return $value;
+		return $closure();
 	}
 
 	/**

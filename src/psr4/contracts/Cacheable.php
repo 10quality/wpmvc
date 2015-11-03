@@ -2,6 +2,8 @@
 
 namespace Amostajo\WPPluginCore\Contracts;
 
+use Closure;
+
 /**
  * Cacheable contract.
  * Interface for Cache class.
@@ -55,12 +57,12 @@ interface Cacheable
 	 * Returns the value of a given key.
 	 * If it doesn't exist, then the value pass by is returned.
 	 * @since 1.0
-	 * @param string $key     Main plugin object as reference.
-	 * @param int  	 $expires Expiration time in minutes.
-	 * @param mixed  $value   Value to cache.
+	 * @param string  $key     Main plugin object as reference.
+	 * @param int  	  $expires Expiration time in minutes.
+	 * @param Closure $value   Value to cache.
 	 * @return mixed
 	 */
-	public static function remember( $key, $expires, $value );
+	public static function remember( $key, $expires, Closure $value );
 
 	/**
 	 * Removes a key / value from cache.
