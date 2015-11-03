@@ -128,7 +128,7 @@ class Cache implements Cacheable
 				return $value;
 			}
 		}
-		return false;
+		return $value;
 	}
 
 	/**
