@@ -1,6 +1,6 @@
 <?php
 
-namespace Amostajo\WPPluginCore\Classes;
+namespace Amostajo\WPPluginCore;
 
 use ReflectionClass;
 use Amostajo\WPPluginCore\Contracts\Plugable;

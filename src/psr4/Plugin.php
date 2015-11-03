@@ -2,6 +2,7 @@
 
 namespace Amostajo\WPPluginCore;
 
+use Amostajo\WPPluginCore\Cache;
 use Amostajo\WPPluginCore\Contracts\Plugable;
 use Amostajo\LightweightMVC\Engine;
 
@@ -54,6 +55,7 @@ abstract class Plugin implements Plugable
 		);
 		$this->addons = array();
 		$this->set_addons();
+		Cache::init( $this->config );
 	}
 
 	/**

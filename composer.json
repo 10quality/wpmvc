@@ -11,7 +11,8 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "amostajo/lightweight-mvc": "1.0.*"
+        "amostajo/lightweight-mvc": "1.0.*",
+        "phpfastcache/phpfastcache": "^3.0"
     },
     "autoload": {
         "files": [
