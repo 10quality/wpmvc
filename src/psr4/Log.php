@@ -83,7 +83,15 @@ class Log implements Loggable
 	{
 		$logger = self::instance();
 		if ( $logger ) {
-			$logger->debug( $message, $values );
+			$logger->debug(
+				$message,
+				is_array( $values )
+					? $values
+					: ( is_object( $values )
+						? (array)$values
+						: [ $values ]
+					)
+			);
 		}
 	}
 
