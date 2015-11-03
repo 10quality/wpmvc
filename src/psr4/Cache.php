@@ -3,7 +3,7 @@
 namespace Amostajo\WPPluginCore;
 
 use Closure;
-use phpFastCache;
+use PHPFastCache\phpFastCache;
 use Amostajo\WPPluginCore\Contracts\Cacheable;
 
 /**
