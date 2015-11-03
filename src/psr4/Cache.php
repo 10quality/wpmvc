@@ -48,7 +48,7 @@ class Cache implements Cacheable
 	/**
 	 * Static constructor.
 	 * @since 1.0
-	 * @param string $key Cache key name.
+	 * @param array $config Config settings.
 	 */
 	public static function init( $config )
 	{

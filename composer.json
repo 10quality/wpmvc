@@ -12,7 +12,8 @@
     "require": {
         "php": ">=5.3.0",
         "amostajo/lightweight-mvc": "1.0.*",
-        "amostajo/phpfastcache": "^3.0"
+        "amostajo/phpfastcache": "^3.0",
+        "katzgrau/klogger": "dev-master"
     },
     "autoload": {
         "files": [

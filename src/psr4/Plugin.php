@@ -3,6 +3,7 @@
 namespace Amostajo\WPPluginCore;
 
 use Amostajo\WPPluginCore\Cache;
+use Amostajo\WPPluginCore\Log;
 use Amostajo\WPPluginCore\Contracts\Plugable;
 use Amostajo\LightweightMVC\Engine;
 
@@ -57,6 +58,8 @@ abstract class Plugin implements Plugable
 		$this->set_addons();
 		if ( $this->config->get( 'cache' ) )
 			Cache::init( $this->config );
+		if ( $this->config->get( 'log' ) )
+			Log::init( $this->config );
 	}
 
 	/**
