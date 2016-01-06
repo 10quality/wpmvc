@@ -5,7 +5,7 @@
  * @author Alejandro Mostajo
  * @license MIT
  * @package Amostajo\WPPluginCore
- * @version 1.1
+ * @version 1.2
  */
 
 if ( ! function_exists( 'resize_image' ) ) {
@@ -48,6 +48,56 @@ if ( ! function_exists( 'resize_image' ) ) {
     }
 }
 
+if ( ! function_exists( 'theme_basename' ) ) {
+    /**
+     * Returens basename / relative path of a theme file.
+     * @since 1.2
+     *
+     * @param string $file File path.
+     *
+     * @return string
+     */
+    function theme_basename( $file )
+    {
+        return trim( preg_replace(
+            '#^' . preg_quote(wp_normalize_path( get_template_directory() ), '#') . '/#',
+            '',
+            wp_normalize_path( $file )
+        ) , '/');
+    }
+}
+
+if ( ! function_exists( 'theme_url' ) ) {
+    /**
+     * Returns the url based on the relative path and file passed by.
+     * @since 1.2
+     *
+     * @param string $path  Relative path.
+     * @param string $theme Theme file.
+     *
+     * @return string
+     */
+    function theme_url( $path, $theme )
+    {
+        $path = wp_normalize_path( $path );
+        $theme = wp_normalize_path( $theme );
+        $url = set_url_scheme(
+            wp_normalize_path( get_template_directory_uri() )
+        );
+
+        if ( !empty($theme) && is_string($theme) ) {
+            $folder = dirname(theme_basename($theme));
+            if ( '.' != $folder )
+                $url .= '/' . ltrim($folder, '/');
+        }
+
+        if ( $path && is_string( $path ) )
+            $url .= '/' . ltrim($path, '/');
+
+        return $url;
+    }
+}
+
 if ( ! function_exists( 'asset_url' ) ) {
     /**
      * Returns url of asset located in a theme or plugin.
@@ -64,25 +114,7 @@ if ( ! function_exists( 'asset_url' ) ) {
         if ( preg_match( '/plugins/', $file ) )
             $url = plugins_url( $path , $file );
         if ( preg_match( '/themes/', $file ) )
-            $url = get_template_directory_uri() 
-                . preg_replace(
-                    '/\\\/',
-                    '/',
-                    str_replace(
-                        basename( $file ),
-                        '',
-                        str_replace(
-                            preg_replace(
-                                '/\//',
-                                '\\',
-                                get_template_directory()
-                            ),
-                            '',
-                            $file
-                        )
-                    )
-                )
-                . $path;
+            $url = theme_url( $path , $file );
         return $url;
     }
 }
