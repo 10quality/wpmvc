@@ -60,7 +60,7 @@ if ( ! function_exists( 'theme_basename' ) ) {
     function theme_basename( $file )
     {
         return trim( preg_replace(
-            '#^' . preg_quote(wp_normalize_path( get_template_directory() ), '#') . '/#',
+            '#^' . preg_quote( wp_normalize_path( get_template_directory() ), '#' ) . '/#',
             '',
             wp_normalize_path( $file )
         ) , '/');
@@ -80,10 +80,7 @@ if ( ! function_exists( 'theme_url' ) ) {
     function theme_url( $path, $theme )
     {
         $path = wp_normalize_path( $path );
-        $theme = wp_normalize_path( $theme );
-        $url = set_url_scheme(
-            wp_normalize_path( get_template_directory_uri() )
-        );
+        $url = get_template_directory_uri();
 
         if ( !empty($theme) && is_string($theme) ) {
             $folder = dirname(theme_basename($theme));
