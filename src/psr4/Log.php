@@ -12,12 +12,19 @@ use Amostajo\WPPluginCore\Contracts\Loggable;
  * @author Alejandro Mostajo
  * @license MIT
  * @package Amostajo\WPPluginCore
- * @version 1.0
+ * @version 1.1
  */
 class Log implements Loggable
 {
 	/**
-	 * Fast cache class engine.
+	 * Log path.
+	 * @since 1.1
+	 */
+	protected static $path;
+
+	/**
+	 * Log driver.
+	 * @since 1.0
 	 */
 	protected static $logger;
 
@@ -36,7 +43,7 @@ class Log implements Loggable
 				mkdir( $config->get( 'log.path' ), 0777, true );
 			}
 			// Init logger
-			self::$logger = new Logger( $config->get( 'log.path' ) );
+			self::$path = $config->get( 'log.path' );
 		}
 	}
 
@@ -57,7 +64,10 @@ class Log implements Loggable
 	 */
 	public static function instance()
 	{
-		return isset( self::$logger ) ? self::$logger : false;
+		if ( ! isset( self::$logger ) ) {
+			self::$logger = new Logger( self::$path );
+		}
+		return self::$logger;
 	}
 
 	/**
