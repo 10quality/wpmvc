@@ -136,35 +136,35 @@ abstract class Plugin implements Plugable
 			// Expected format
 			// _c_[return]_[mvccall]
 			// Sample - _c_void_ConfigController@local
-			$method_options = explode( '_', $method );
-			if ( count( $method_options ) != 4 ) return;
-			if ( $method_options[2] === 'return' ) {
+			$is_return = preg_match( '/^\_c\_return\_/', $method );
+			$method = preg_replace( '/^\_c\_(return|void)\_/', '', $method );
+			if ( $is_return ) {
 				return $this->mvc->action_args(
-					$method_options[3],
-					$this->override_args( $method_options[3], $args )
+					$method,
+					$this->override_args( $method, $args )
 				);
 			} else {
 				$this->mvc->call_args(
-					$method_options[3],
-					$this->override_args( $method_options[3], $args )
+					$method,
+					$this->override_args( $method, $args )
 				);
 			}
 		} else if ( preg_match( '/^\_v\_/', $method ) ) {
 			// Expected format
 			// _v_[return]_[mvccall]
 			// Sample - _v_void_View@test.view
-			$method_options = explode( '_', $method );
-			if ( count( $method_options ) != 4 ) return;
-			$view =  preg_replace( '/[vV]iew\@/', '', $method_options[3] );
-			if ( $method_options[2] === 'return' ) {
+			$is_return = preg_match( '/^\_v\_return\_/', $method );
+			$method = preg_replace( '/^\_v\_(return|void)\_/', '', $method );
+			$view =  preg_replace( '/[vV]iew\@/', '', $method );
+			if ( $is_return ) {
 				return $this->mvc->view->get(
 					$view,
-					$this->override_args( $method_options[3], $args )
+					$this->override_args( $method, $args )
 				);
 			} else {
 				$this->mvc->view->show(
 					$view,
-					$this->override_args( $method_options[3], $args )
+					$this->override_args( $method, $args )
 				);
 			}
 		} else {
