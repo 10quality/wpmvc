@@ -1,8 +1,8 @@
 {
-    "name": "amostajo/wordpress-plugin-core",
-    "description": "Core functionality and libraries for Wordpress Plugin (a light weight plugin template with composer and MVC).",
+    "name": "10quality/wpmvc",
+    "description": "Wordpress MVC crore plugin.",
     "license": "MIT",
-    "keywords": ["wordpress plugin","plugin","wordpress","code"],
+    "keywords": ["wordpress","mvc","core"],
     "authors": [
         {
             "name": "Alejandro Mostajo",
@@ -10,8 +10,8 @@
         }
     ],
     "require": {
-        "php": ">=5.3.0",
-        "amostajo/lightweight-mvc": "1.0.*",
+        "php": ">=5.4.0",
+        "10quality/wpmvc-mvc": "1.0.*",
         "amostajo/phpfastcache": "^3.0",
         "katzgrau/klogger": "dev-master"
     },
@@ -20,7 +20,7 @@
             "src/lib/functions.php"
         ],
         "psr-4": {
-            "Amostajo\\WPPluginCore\\": "src/psr4"
+            "WPMVC\\": "src/psr4"
         }
     },
     "minimum-stability": "dev"

@@ -2,16 +2,17 @@
 /**
  * CORE wordpress functions.
  *
- * @author Alejandro Mostajo
+ * @author Alejandro Mostajo <http://about.me/amostajo>
+ * @copyright 10Quality <http://www.10quality.com>
  * @license MIT
- * @package Amostajo\WPPluginCore
- * @version 1.2
+ * @package WPMVC
+ * @version 1.0.2
  */
 
 if ( ! function_exists( 'resize_image' ) ) {
     /**
      * Resizes image and returns URL path.
-     * @since 1.0
+     * @since 1.0.1
      *
      * @param string  $url    Image URL path
      * @param int     $width  Width wanted.
@@ -51,7 +52,7 @@ if ( ! function_exists( 'resize_image' ) ) {
 if ( ! function_exists( 'theme_basename' ) ) {
     /**
      * Returens basename / relative path of a theme file.
-     * @since 1.2
+     * @since 1.0.2
      *
      * @param string $file File path.
      *
@@ -70,7 +71,7 @@ if ( ! function_exists( 'theme_basename' ) ) {
 if ( ! function_exists( 'theme_url' ) ) {
     /**
      * Returns the url based on the relative path and file passed by.
-     * @since 1.2
+     * @since 1.0.2
      *
      * @param string $path  Relative path.
      * @param string $theme Theme file.
@@ -98,7 +99,7 @@ if ( ! function_exists( 'theme_url' ) ) {
 if ( ! function_exists( 'asset_url' ) ) {
     /**
      * Returns url of asset located in a theme or plugin.
-     * @since 1.1
+     * @since 1.0.1
      *
      * @param string  $path Asset relative path.
      * @param string  $file File location path.

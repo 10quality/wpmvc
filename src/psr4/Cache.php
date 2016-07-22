@@ -1,18 +1,19 @@
 <?php
 
-namespace Amostajo\WPPluginCore;
+namespace WPMVC;
 
 use Closure;
 use PHPFastCache\phpFastCache;
-use Amostajo\WPPluginCore\Contracts\Cacheable;
+use WPMVC\Contracts\Cacheable;
 
 /**
  * Cache class.
  *
- * @author Alejandro Mostajo
+ * @author Alejandro Mostajo <http://about.me/amostajo>
+ * @copyright 10Quality <http://www.10quality.com>
  * @license MIT
- * @package Amostajo\WPPluginCore
- * @version 1.0
+ * @package WPMVC
+ * @version 1.0.0
  */
 class Cache implements Cacheable
 {
@@ -23,7 +24,7 @@ class Cache implements Cacheable
 
 	/**
 	 * Default constructor.
-	 * @since 1.0
+	 * @since 1.0.0
 	 * @param array $config Config settings.
 	 */
 	public function __construct( $config )
@@ -47,7 +48,7 @@ class Cache implements Cacheable
 
 	/**
 	 * Static constructor.
-	 * @since 1.0
+	 * @since 1.0.0
 	 * @param array $config Config settings.
 	 */
 	public static function init( $config )
@@ -57,7 +58,7 @@ class Cache implements Cacheable
 
 	/**
 	 * Returns Cache instance.
-	 * @since 1.0
+	 * @since 1.0.0
 	 * @return mixed.
 	 */
 	public static function instance()
@@ -67,7 +68,7 @@ class Cache implements Cacheable
 
 	/**
 	 * Returns value stored in cache.
-	 * @since 1.0
+	 * @since 1.0.0
 	 * @param string $key Cache key name.
 	 */
 	public static function get( $key )
@@ -81,7 +82,7 @@ class Cache implements Cacheable
 
 	/**
 	 * Adds a value to cache.
-	 * @since 1.0
+	 * @since 1.0.0
 	 * @param string $key     Main plugin object as reference.
 	 * @param mixed  $value   Value to cache.
 	 * @param int  	 $expires Expiration time in minutes.
@@ -96,7 +97,7 @@ class Cache implements Cacheable
 
 	/**
 	 * Returns flag if a given key has a value in cache or not.
-	 * @since 1.0
+	 * @since 1.0.0
 	 * @param string $key Cache key name.
 	 * @return bool
 	 */
@@ -112,7 +113,7 @@ class Cache implements Cacheable
 	/**
 	 * Returns the value of a given key.
 	 * If it doesn't exist, then the value pass by is returned.
-	 * @since 1.0
+	 * @since 1.0.0
 	 * @param string  $key     Main plugin object as reference.
 	 * @param int  	  $expires Expiration time in minutes.
 	 * @param Closure $value   Value to cache.
@@ -135,7 +136,7 @@ class Cache implements Cacheable
 
 	/**
 	 * Removes a key / value from cache.
-	 * @since 1.0
+	 * @since 1.0.0
 	 * @param string $key Cache key name.
 	 */
 	public static function forget( $key )
@@ -148,7 +149,7 @@ class Cache implements Cacheable
 
 	/**
 	 * Flushes all cache keys and values.
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static function flush()
 	{

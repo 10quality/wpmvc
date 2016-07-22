@@ -1,38 +1,40 @@
 <?php
 
-namespace Amostajo\WPPluginCore;
+namespace WPMVC;
 
 use ReflectionClass;
-use Amostajo\WPPluginCore\Contracts\Plugable;
-use Amostajo\LightweightMVC\Engine;
+use WPMVC\Contracts\Plugable;
+use WPMVC\MVC\Engine;
 
 /**
  * Addon abstract class.
  *
- * @author Alejandro Mostajo
+ * @link https://github.com/amostajo/wordpress-plugin-core/blob/v1.0/src/psr4/Addon.php
+ * @author Alejandro Mostajo <http://about.me/amostajo>
+ * @copyright 10Quality <http://www.10quality.com>
  * @license MIT
- * @package Amostajo\WPPluginCore
- * @version 1.0
+ * @package WPMVC
+ * @version 1.0.0
  */
 abstract class Addon implements Plugable
 {
     /**
      * Plugin object reference.
      * @var object Plugin
-     * @since 1.0
+     * @since 1.0.0
      */
     protected $main;
 
     /**
      * MVC engine.
      * @var object Plugin
-     * @since 1.0
+     * @since 1.0.0
      */
     protected $mvc;
 
     /**
      * Default constructor.
-     * @since 1.0
+     * @since 1.0.0
      *
      * @param object $main Plugin object.
      */
@@ -49,7 +51,7 @@ abstract class Addon implements Plugable
 
     /**
      * Called on init.
-     * @since 1.0
+     * @since 1.0.0
      *
      * @param object &$main Main plugin object as reference.
      *
@@ -62,7 +64,7 @@ abstract class Addon implements Plugable
 
     /**
      * Called on admin.
-     * @since 1.0
+     * @since 1.0.0
      *
      * @param object &$main Main plugin object as reference.
      *

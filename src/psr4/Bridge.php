@@ -1,76 +1,78 @@
 <?php
 
-namespace Amostajo\WPPluginCore;
+namespace WPMVC;
 
-use Amostajo\WPPluginCore\Cache;
-use Amostajo\WPPluginCore\Log;
-use Amostajo\WPPluginCore\Contracts\Plugable;
-use Amostajo\LightweightMVC\Engine;
+use WPMVC\Cache;
+use WPMVC\Log;
+use WPMVC\Contracts\Plugable;
+use WPMVC\MVC\Engine;
 
 /**
  * Plugin class.
  * To be extended as main plugin / theme class.
  * Part of the core library of Wordpress Plugin / Wordpress Theme.
  *
- * @author Alejandro Mostajo
+ * @link https://github.com/amostajo/wordpress-plugin-core/blob/v1.0/src/psr4/Plugin.php
+ * @author Alejandro Mostajo <http://about.me/amostajo>
+ * @copyright 10Quality <http://www.10quality.com>
  * @license MIT
- * @package Amostajo\WPPluginCore
- * @version 1.3
+ * @package WPMVC
+ * @version 1.0.3
  */
-abstract class Plugin implements Plugable
+abstract class Bridge implements Plugable
 {
 	/**
 	 * Configuration file.
 	 * @var array
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	protected $config;
 
 	/**
 	 * MVC engine.
 	 * @var object Engine
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	protected $mvc;
 
 	/**
 	 * Add ons.
 	 * @var array
-	 * @since 1.2
+	 * @since 1.0.2
 	 */
 	protected $addons;
 
 	/**
 	 * List of Wordpress action hooks to add.
 	 * @var array
-	 * @since 1.3
+	 * @since 1.0.3
 	 */
 	protected $actions;
 
 	/**
 	 * List of Wordpress filter hooks to add.
 	 * @var array
-	 * @since 1.3
+	 * @since 1.0.3
 	 */
 	protected $filters;
 
 	/**
 	 * List of Wordpress shortcodes to add.
 	 * @var array
-	 * @since 1.3
+	 * @since 1.0.3
 	 */
 	protected $shortcodes;
 
 	/**
 	 * List of Wordpress widgets to add.
 	 * @var array
-	 * @since 1.3
+	 * @since 1.0.3
 	 */
 	protected $widgets;
 
 	/**
 	 * Main constructor
-	 * @since 1.0
+	 * @since 1.0.0
 	 *
 	 * @param array $config Configuration options.
 	 */
@@ -96,7 +98,7 @@ abstract class Plugin implements Plugable
 
 	/**
 	 * Returns READ-ONLY properties.
-	 * @since 1.2
+	 * @since 1.0.2
 	 *
 	 * @param string $property Property name.
 	 *
@@ -116,8 +118,8 @@ abstract class Plugin implements Plugable
 	/**
 	 * Calls to class or addon method.
 	 * Checks "addon_" prefix to search for addon methods.
-	 * @since 1.2
-	 * @since 1.3 Added MVC controller and views direct calls.
+	 * @since 1.0.2
+	 * @since 1.0.3 Added MVC controller and views direct calls.
 	 *
 	 * @return mixed
 	 */
@@ -174,7 +176,7 @@ abstract class Plugin implements Plugable
 
 	/**
 	 * Sets plugin addons.
-	 * @since 1.2
+	 * @since 1.0.2
 	 *
 	 * @return void
 	 */
@@ -189,7 +191,7 @@ abstract class Plugin implements Plugable
 
 	/**
 	 * Displays view with the parameters passed by.
-	 * @since 1.1
+	 * @since 1.0.1
 	 *
 	 * @param string $view   Name and location of the view within "theme/views" path.
 	 * @param array  $params View parameters passed by.
@@ -203,7 +205,7 @@ abstract class Plugin implements Plugable
 
 	/**
 	 * Called by autoload to init class.
-	 * @since 1.2
+	 * @since 1.0.2
 	 * @return void
 	 */
 	public function autoload_init()
@@ -217,7 +219,7 @@ abstract class Plugin implements Plugable
 
 	/**
 	 * Called by autoload to init on admin.
-	 * @since 1.2
+	 * @since 1.0.2
 	 * @return void
 	 */
 	public function autoload_on_admin()
@@ -231,7 +233,7 @@ abstract class Plugin implements Plugable
 
 	/**
 	 * Init.
-	 * @since 1.2
+	 * @since 1.0.2
 	 * @return void
 	 */
 	public function init()
@@ -241,7 +243,7 @@ abstract class Plugin implements Plugable
 
 	/**
 	 * On admin Dashboard.
-	 * @since 1.2
+	 * @since 1.0.2
 	 * @return void
 	 */
 	public function on_admin()
@@ -251,7 +253,7 @@ abstract class Plugin implements Plugable
 
 	/**
 	 * Adds a Wordpress action hook.
-	 * @since 1.3
+	 * @since 1.0.3
 	 *
 	 * @param string $hook 		    Wordpress hook name.
 	 * @param string $mvc_call      Lightweight MVC call. (i.e. 'Controller@method')
@@ -272,7 +274,7 @@ abstract class Plugin implements Plugable
 
 	/**
 	 * Adds a Wordpress filter hook.
-	 * @since 1.3
+	 * @since 1.0.3
 	 *
 	 * @param string $hook 		    Wordpress hook name.
 	 * @param string $mvc_call      Lightweight MVC call. (i.e. 'Controller@method')
@@ -293,7 +295,7 @@ abstract class Plugin implements Plugable
 
 	/**
 	 * Adds a Wordpress shortcode.
-	 * @since 1.3
+	 * @since 1.0.3
 	 *
 	 * @param string $tag 	   Wordpress tag name.
 	 * @param string $mvc_call Lightweight MVC call. (i.e. 'Controller@method')
@@ -309,7 +311,7 @@ abstract class Plugin implements Plugable
 
 	/**
 	 * Adds a Wordpress shortcode.
-	 * @since 1.3
+	 * @since 1.0.3
 	 *
 	 * @param string $class Widget class name to add.
 	 */
@@ -320,7 +322,7 @@ abstract class Plugin implements Plugable
 
 	/**
 	 * Adds hooks and filters into Wordpress core.
-	 * @since 1.3
+	 * @since 1.0.3
 	 */
 	public function add_hooks()
 	{
@@ -362,7 +364,7 @@ abstract class Plugin implements Plugable
 
 	/**
 	 * Registers added widgets into Wordpress.
-	 * @since 1.3
+	 * @since 1.0.3
 	 */
 	public function _widgets()
 	{
@@ -373,7 +375,7 @@ abstract class Plugin implements Plugable
 
 	/**
 	 * Returns class method call mapped to a mvc engine method.
-	 * @since 1.3
+	 * @since 1.0.3
 	 *
 	 * @return string
 	 */
@@ -386,7 +388,7 @@ abstract class Plugin implements Plugable
 
 	/**
 	 * Returns valid action filter item.
-	 * @since 1.3
+	 * @since 1.0.3
 	 *
 	 * @param string $hook 		    Wordpress hook name.
 	 * @param string $mvc_call      Lightweight MVC call. (i.e. 'Controller@method')
@@ -409,7 +411,7 @@ abstract class Plugin implements Plugable
 
 	/**
 	 * Override mvc arguments with those defined when adding an action or filter.
-	 * @since 1.3
+	 * @since 1.0.3
 	 *
 	 * @param string $mvc_call Lightweight MVC call. (i.e. 'Controller@method')
 	 * @param array  $args     Current args for call.

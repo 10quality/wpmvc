@@ -1,36 +1,38 @@
 <?php
 
-namespace Amostajo\WPPluginCore;
+namespace WPMVC;
 
 use Katzgrau\KLogger\Logger;
-use Amostajo\WPPluginCore\Config;
-use Amostajo\WPPluginCore\Contracts\Loggable;
+use WPMVC\Config;
+use WPMVC\Contracts\Loggable;
 
 /**
  * Log class.
  *
- * @author Alejandro Mostajo
+ * @author Alejandro Mostajo <http://about.me/amostajo>
+ * @copyright 10Quality <http://www.10quality.com>
  * @license MIT
- * @package Amostajo\WPPluginCore
- * @version 1.1
+ * @package WPMVC
+ * @version 1.0.1
  */
 class Log implements Loggable
 {
 	/**
 	 * Log path.
-	 * @since 1.1
+	 * @since 1.0.1
 	 */
 	protected static $path;
 
 	/**
 	 * Log driver.
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	protected static $logger;
 
 	/**
 	 * Default constructor.
-	 * @since 1.0
+	 * @since 1.0.0
+	 * @since 1.0.1 Path added.
 	 * @param array $config Config settings.
 	 */
 	public function __construct( Config $config )
@@ -49,7 +51,7 @@ class Log implements Loggable
 
 	/**
 	 * Static constructor.
-	 * @since 1.0
+	 * @since 1.0.0
 	 * @param array $config Config settings.
 	 */
 	public static function init( Config $config )
@@ -59,7 +61,7 @@ class Log implements Loggable
 
 	/**
 	 * Returns Logger instance.
-	 * @since 1.0
+	 * @since 1.0.0
 	 * @return mixed.
 	 */
 	public static function instance()
@@ -72,7 +74,7 @@ class Log implements Loggable
 
 	/**
 	 * Prints message information in log.
-	 * @since 1.0
+	 * @since 1.0.0
 	 * @param string $message Message information to display in log.
 	 */
 	public static function info( $message )
@@ -85,7 +87,7 @@ class Log implements Loggable
 
 	/**
 	 * Debugs / prints value in log.
-	 * @since 1.0
+	 * @since 1.0.0
 	 * @param mixed $message Message to debug.
 	 * @param array $values  Value(s) to debug.
 	 */
@@ -107,7 +109,7 @@ class Log implements Loggable
 
 	/**
 	 * Prints error log.
-	 * @since 1.0
+	 * @since 1.0.0
 	 * @param mixed $e Exception / error.
 	 */
 	public static function error( $e )

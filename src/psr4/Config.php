@@ -1,28 +1,29 @@
 <?php
 
-namespace Amostajo\WPPluginCore;
+namespace WPMVC;
 
 /**
  * Config class.
  * Part of the core library of Wordpress Plugin.
  *
- * @author Alejandro Mostajo
+ * @author Alejandro Mostajo <http://about.me/amostajo>
+ * @copyright 10Quality <http://www.10quality.com>
  * @license MIT
- * @package Amostajo\WPPluginCore
- * @version 1.0
+ * @package WPMVC
+ * @version 1.0.0
  */
 class Config
 {
 	/**
 	 * Raw config array.
 	 * @var array
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	protected $raw;
 
 	/**
 	 * Constructor.
-	 * @since 1.0
+	 * @since 1.0.0
 	 *
 	 * @param array $raw Raw config array.
 	 */
@@ -35,7 +36,7 @@ class Config
 	 * Returns value stored in given key.
 	 * Can acces multidimenssional array values with a DOT(.)
 	 * i.e. paypal.client_id
-	 * @since 1.0
+	 * @since 1.0.0
 	 *
 	 * @param string $key Key.
 	 * @param string $sub Child array
