@@ -1,6 +1,6 @@
 {
     "name": "10quality/wpmvc",
-    "description": "Wordpress MVC crore plugin.",
+    "description": "Wordpress MVC core package.",
     "license": "MIT",
     "keywords": ["wordpress","mvc","core"],
     "authors": [
@@ -13,7 +13,8 @@
         "php": ">=5.4.0",
         "10quality/wpmvc-mvc": "1.0.*",
         "amostajo/phpfastcache": "^3.0",
-        "katzgrau/klogger": "dev-master"
+        "katzgrau/klogger": "dev-master",
+        "10quality/wpmvc-commands": "^0.3.0"
     },
     "autoload": {
         "files": [
