@@ -5,7 +5,7 @@
  */
 return [
 
-    'namespace' => 'App',
+    'namespace' => 'MyApp',
 
     'type' => 'theme',
 
@@ -13,7 +13,7 @@ return [
 
         'controllers'   => __DIR__ . '/../Controllers',
         'views'         => __DIR__ . '/../../assets/views',
-        'log'           => get_home_path() . './wpmvc/log',
+        'log'           => get_wp_home_path() . './wpmvc/log',
 
     ],
 
@@ -24,7 +24,7 @@ return [
         // files, auto (files), apc, wincache, xcache, memcache, memcached
         'storage'       => 'auto',
         // Default path for files
-        'path'          => get_home_path() . './wpmvc/cache',
+        'path'          => get_wp_home_path() . './wpmvc/cache',
         // It will create a path by PATH/securityKey
         'securityKey'   => '',
         // FallBack Driver
