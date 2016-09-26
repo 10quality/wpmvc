@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__.'/vendor/autoload.php';
+
+$ayuco = get_ayuco( __DIR__ );
+
+// BEGIN - Custom commands
+// END - Custom commands
+
+$ayuco->interpret();

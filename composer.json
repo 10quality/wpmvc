@@ -1,0 +1,10 @@
+{
+    "name": "app",
+    "description": "My app description.",
+    "require": {
+        "10quality/wpmvc-core": "2.0.*"
+    },
+    "require-dev": {
+        "10quality/wpmvc-commands": "1.0.*"
+    },
+}
