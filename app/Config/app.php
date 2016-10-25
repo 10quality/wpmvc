@@ -11,8 +11,8 @@ return [
 
     'paths' => [
 
-        'controllers'   => __DIR__ . '/../Controllers',
-        'views'         => __DIR__ . '/../../assets/views',
+        'controllers'   => __DIR__ . '/../Controllers/',
+        'views'         => __DIR__ . '/../../assets/views/',
         'log'           => get_wp_home_path() . './wpmvc/log',
 
     ],
