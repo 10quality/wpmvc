@@ -23,7 +23,6 @@ class Main extends Bridge
         // Sample
         // $this->add_action( 'the_content', 'PostController@filter' );
     }
-
     /**
      * Declaration of admin only wordpress hooks.
      * For Wordpress admin dashboard.
