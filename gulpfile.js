@@ -18,7 +18,7 @@ var wpmvc = require('gulp-wpmvc');
 var config = JSON.parse(fs.readFileSync('./package.json'));
 
 // Init WPMVC default tasks.
-wpmvc(config);
+wpmvc(gulp, config);
 
 // --------------
 // START - CUSTOM TASKS
