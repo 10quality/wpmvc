@@ -17,6 +17,8 @@ return [
 
     ],
 
+    'autoenqueue' => true,
+
     'cache' => [
 
         // Enables or disables cache
