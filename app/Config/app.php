@@ -17,7 +17,27 @@ return [
 
     ],
 
-    'autoenqueue' => true,
+    'version' => '1.0.0',
+
+    'autoenqueue' => [
+
+        // Enables or disables auto-enqueue of assets
+        'enabled'       => true,
+        // Assets to auto-enqueue
+        'assets'        => [
+                            [
+                                'asset'     => 'css/app.css',
+                                'dep'       => [],
+                                'footer'    => false,
+                            ],
+                            [
+                                'asset'     => 'js/app.js',
+                                'dep'       => [],
+                                'footer'    => true,
+                            ],
+                        ],
+
+    ],
 
     'cache' => [
 
