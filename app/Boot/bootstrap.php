@@ -8,7 +8,7 @@ use WPMVC\Config;
  * @author Alejandro Mostajo
  * @license MIT
  * @package WPMVC
- * @version 1.0.2
+ * @version 2.0.0
  */
 
 require_once( __DIR__ . '/../../vendor/autoload.php' );
@@ -66,6 +66,8 @@ if ( ! function_exists( 'wdt_hooks_error' )  ) {
     /**
      * Displayes wordpress admin notice for missing hooks function.
      * @since 1.0.2
+     *
+     * @global object $plugin_error Reflection class to handle error version.
      */
     function wdt_hooks_error()
     {
@@ -81,6 +83,23 @@ if ( ! function_exists( 'wdt_hooks_error' )  ) {
         </div>
         <?php
         unset($plugin_error);
+    }
+}
+
+if ( $config['type'] == 'theme' && ! function_exists( 'theme_view' ) ) {
+    /**
+     * Prints / echos a view located in the theme.
+     * @since 2.0.0
+     *
+     * @global object $theme Theme's main class global variable.
+     *
+     * @param string $key    View key.
+     * @param array  $params View params.
+     */
+    function theme_view( $key, $params = [] )
+    {
+        global $theme;
+        $theme->view( $key, $params );
     }
 }
 
