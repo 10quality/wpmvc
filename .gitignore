@@ -9,4 +9,8 @@
 
 # Generated tmp:
 /builds
+/svn
 composer.lock
+
+# Env files
+wordpress-org.json
