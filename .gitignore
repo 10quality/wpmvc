@@ -11,6 +11,7 @@
 /builds
 /svn
 composer.lock
+.DS_Store
 
 # Env files
 wordpress-org.json
