@@ -1,6 +1,5 @@
 {
     "name": "MyApp",
-    "description": "My app description.",
     "require": {
         "php": ">=5.4.0",
         "10quality/wpmvc-core": "3.0.*"

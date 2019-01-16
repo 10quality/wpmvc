@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+if ( ! defined(  'WP_CONTENT_DIR' ) ) define( 'WP_CONTENT_DIR', __DIR__ );
+
 require_once __DIR__.'/vendor/autoload.php';
 
 /**

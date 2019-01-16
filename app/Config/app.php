@@ -14,11 +14,14 @@ return [
         'base'          => __DIR__ . '/../',
         'controllers'   => __DIR__ . '/../Controllers/',
         'views'         => __DIR__ . '/../../assets/views/',
-        'log'           => get_wp_home_path() . './wpmvc/log',
+        'lang'          => __DIR__ . '/../../assets/lang/',
+        'log'           => WP_CONTENT_DIR . '/wpmvc/log',
 
     ],
 
     'version' => '1.0.0',
+
+    'text-domain' => 'my-app',
 
     'autoenqueue' => [
 
@@ -47,7 +50,7 @@ return [
         // files, auto (files), apc, wincache, xcache, memcache, memcached
         'storage'       => 'auto',
         // Default path for files
-        'path'          => get_wp_home_path() . './wpmvc/cache',
+        'path'          => WP_CONTENT_DIR . '/wpmvc/cache',
         // It will create a path by PATH/securityKey
         'securityKey'   => '',
         // FallBack Driver
