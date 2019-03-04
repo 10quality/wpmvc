@@ -2,7 +2,7 @@
     "name": "MyApp",
     "require": {
         "php": ">=5.4.0",
-        "10quality/wpmvc-core": "3.0.*"
+        "10quality/wpmvc-core": "^3.1"
     },
     "require-dev": {
         "10quality/wpmvc-commands": "1.0.*"

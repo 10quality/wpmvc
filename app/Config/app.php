@@ -21,8 +21,6 @@ return [
 
     'version' => '1.0.0',
 
-    'text-domain' => 'my-app',
-
     'autoenqueue' => [
 
         // Enables or disables auto-enqueue of assets
@@ -64,6 +62,21 @@ return [
         'server'        => [
                             [ '127.0.0.1', 11211, 1 ],
                         ],
+
+    ],
+
+    'localize' => [
+
+        // Enables or disables localization
+        'enabled'       => false,
+        // Default path for language files
+        'path'          => __DIR__ . '/../../assets/lang/',
+        // Text domain
+        'textdomain'    => 'text-domain',
+        // Unload loaded locale files before localization
+        'unload'        => false,
+        // Flag that inidcates if this is a Wordpress.org plugin/theme
+        'is_public'     => false,
 
     ],
 
