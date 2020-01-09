@@ -72,7 +72,7 @@ return [
         // Default path for language files
         'path'          => __DIR__ . '/../../assets/lang/',
         // Text domain
-        'textdomain'    => 'text-domain',
+        'textdomain'    => 'my-app',
         // Unload loaded locale files before localization
         'unload'        => false,
         // Flag that inidcates if this is a Wordpress.org plugin/theme
