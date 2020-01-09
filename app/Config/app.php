@@ -75,7 +75,7 @@ return [
         'textdomain'    => 'text-domain',
         // Unload loaded locale files before localization
         'unload'        => false,
-        // Flag that inidcates if this is a Wordpress.org plugin/theme
+        // Flag that indicates if this is a WordPress.org plugin/theme
         'is_public'     => false,
 
     ],

@@ -6,7 +6,7 @@ use WPMVC\Bridge;
 
 /**
  * Main class.
- * Bridge between Wordpress and App.
+ * Bridge between WordPress and App.
  * Class contains declaration of hooks and filters.
  *
  * @author fill
@@ -15,7 +15,7 @@ use WPMVC\Bridge;
 class Main extends Bridge
 {
     /**
-     * Declaration of public wordpress hooks.
+     * Declaration of public WordPress hooks.
      * @since fill version
      */
     public function init()
@@ -24,8 +24,8 @@ class Main extends Bridge
         // $this->add_action( 'the_content', 'PostController@filter' );
     }
     /**
-     * Declaration of admin only wordpress hooks.
-     * For Wordpress admin dashboard.
+     * Declaration of admin only WordPress hooks.
+     * For WordPress admin dashboard.
      * @since fill version
      */
     public function on_admin()
