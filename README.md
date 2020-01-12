@@ -16,7 +16,7 @@
   * [Shortcodes](https://www.wordpress-mvc.com/v1/shortcodes/)
 * [MVC](https://www.wordpress-mvc.com/v1/mvc/)
   * [Models](https://www.wordpress-mvc.com/v1/models/)
-  * [View](https://www.wordpress-mvc.com/v1/views/)
+  * [Views](https://www.wordpress-mvc.com/v1/views/)
   * [Controllers](https://www.wordpress-mvc.com/v1/controllers/)
 * [Assets](https://www.wordpress-mvc.com/v1/assets/)
 * [Deployment](https://www.wordpress-mvc.com/v1/deployment/)
