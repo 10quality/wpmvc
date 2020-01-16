@@ -4,6 +4,8 @@
 
 [WordPress MVC](https://www.wordpress-mvc.com/) (WPMVC) framework.
 
+The ultimate WordPress framework for custom Themes and Plugins development.
+
 ## The Framework
 
 - [Documentation Version 1](https://www.wordpress-mvc.com/v1/)
