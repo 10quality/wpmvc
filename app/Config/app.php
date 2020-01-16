@@ -9,17 +9,9 @@ return [
 
     'type' => 'theme',
 
-    'paths' => [
-
-        'base'          => __DIR__ . '/../',
-        'controllers'   => __DIR__ . '/../Controllers/',
-        'views'         => __DIR__ . '/../../assets/views/',
-        'lang'          => __DIR__ . '/../../assets/lang/',
-        'log'           => WP_CONTENT_DIR . '/wpmvc/log',
-
-    ],
-
     'version' => '1.0.0',
+
+    'author' => '',
 
     'autoenqueue' => [
 
@@ -38,6 +30,31 @@ return [
                                 'footer'    => true,
                             ],
                         ],
+
+    ],
+
+    'localize' => [
+
+        // Enables or disables localization
+        'enabled'       => false,
+        // Default path for language files
+        'path'          => __DIR__ . '/../../assets/lang/',
+        // Text domain
+        'textdomain'    => 'my-app',
+        // Unload loaded locale files before localization
+        'unload'        => false,
+        // Flag that indicates if this is a WordPress.org plugin/theme
+        'is_public'     => false,
+
+    ],
+
+    'paths' => [
+
+        'base'          => __DIR__ . '/../',
+        'controllers'   => __DIR__ . '/../Controllers/',
+        'views'         => __DIR__ . '/../../assets/views/',
+        'lang'          => __DIR__ . '/../../assets/lang/',
+        'log'           => WP_CONTENT_DIR . '/wpmvc/log',
 
     ],
 
@@ -62,21 +79,6 @@ return [
         'server'        => [
                             [ '127.0.0.1', 11211, 1 ],
                         ],
-
-    ],
-
-    'localize' => [
-
-        // Enables or disables localization
-        'enabled'       => false,
-        // Default path for language files
-        'path'          => __DIR__ . '/../../assets/lang/',
-        // Text domain
-        'textdomain'    => 'my-app',
-        // Unload loaded locale files before localization
-        'unload'        => false,
-        // Flag that indicates if this is a WordPress.org plugin/theme
-        'is_public'     => false,
 
     ],
 

@@ -28,6 +28,40 @@
 - [Tutorial 2: Hello world](https://www.wordpress-mvc.com/v1/tutorial-2-hello-world/)
 - [Tutorial 3: Hooks](https://www.wordpress-mvc.com/v1/tutorial-3-hooks/)
 
+## Install
+
+Download composer dependencies:
+
+```bash
+composer install --no-plugins
+```
+
+Download npm/node dependencies:
+
+```bash
+npm install
+```
+
+Run setup wizard:
+
+```bash
+php ayuco setup
+```
+
+## Update The Framework
+
+Update composer dependencies:
+
+```bash
+composer update --no-plugins
+```
+
+Update npm/node dependencies:
+
+```bash
+npm update
+```
+
 ## License
 
-MIT License - (c) 2018 [10 Quality](https://www.10quality.com/).
+MIT License - (c) 2018 - 2020 [10 Quality](https://www.10quality.com/).
