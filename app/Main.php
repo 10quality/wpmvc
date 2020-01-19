@@ -10,13 +10,13 @@ use WPMVC\Bridge;
  * Class contains declaration of hooks and filters.
  *
  * @author fill
+ * @package fill
  * @version fill
  */
 class Main extends Bridge
 {
     /**
      * Declaration of public WordPress hooks.
-     * @since fill version
      */
     public function init()
     {
@@ -26,7 +26,6 @@ class Main extends Bridge
     /**
      * Declaration of admin only WordPress hooks.
      * For WordPress admin dashboard.
-     * @since fill version
      */
     public function on_admin()
     {
