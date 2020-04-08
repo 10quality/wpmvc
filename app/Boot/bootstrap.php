@@ -5,10 +5,10 @@ use WPMVC\Config;
 /**
  * This file will load configuration file and init Main class.
  *
- * @author Alejandro Mostajo
+ * @author WordPress MVC <https://www.wordpress-mvc.com/>
  * @license MIT
- * @package WPMVC
- * @version 2.0.1
+ * @package wpmvc
+ * @version 1.0.4
  */
 
 require_once( __DIR__ . '/../../vendor/autoload.php' );

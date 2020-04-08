@@ -1,10 +1,10 @@
 /**
  * Gulp
  *
- * @author Alejandro Mostajo <info@10quality.com>
- * @package WPMVC
+ * @author WordPress MVC <https://www.wordpress-mvc.com/>
  * @license MIT
- * @version 1.0
+ * @package wpmvc
+ * @version 1.0.4
  */
 
 'use strict';
@@ -17,8 +17,13 @@ var wpmvc = require('gulp-wpmvc');
 // Load package JSON as config file.
 var config = JSON.parse(fs.readFileSync('./package.json'));
 
-// Init WPMVC default tasks.
-wpmvc(gulp, config);
-
 // --------------
 // START - CUSTOM TASKS
+
+
+
+// END - CUSTOM TASKS
+// --------------
+
+// Init WPMVC default tasks.
+wpmvc(gulp, config);
