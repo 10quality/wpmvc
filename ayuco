@@ -9,10 +9,10 @@ require_once __DIR__.'/vendor/autoload.php';
  * Ayuco.
  * Commands line scaffolding.
  *
- * @author Alejandro Mostajo <info@10quality.com>
- * @package WPMVC
+ * @author WordPress MVC <https://www.wordpress-mvc.com/>
  * @license MIT
- * @version 1.0
+ * @package wpmvc
+ * @version 1.0.0
  */
 
 $ayuco = get_ayuco( __DIR__ );
