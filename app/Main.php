@@ -20,8 +20,6 @@ class Main extends Bridge
      */
     public function init()
     {
-        // Sample
-        // $this->add_action( 'the_content', 'PostController@filter' );
     }
     /**
      * Declaration of admin only WordPress hooks.
@@ -29,7 +27,5 @@ class Main extends Bridge
      */
     public function on_admin()
     {
-        // Sample
-        // $this->add_action( 'save_post', 'PostController@save' );
     }
 }

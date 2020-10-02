@@ -13,23 +13,25 @@ return [
 
     'author' => '',
 
+    'license' => '',
+
     'autoenqueue' => [
 
         // Enables or disables auto-enqueue of assets
         'enabled'       => true,
         // Assets to auto-enqueue
         'assets'        => [
-                            [
-                                'asset'     => 'css/app.css',
-                                'dep'       => [],
-                                'footer'    => false,
-                            ],
-                            [
-                                'asset'     => 'js/app.js',
-                                'dep'       => [],
-                                'footer'    => true,
-                            ],
-                        ],
+            [
+                'asset'     => 'css/app.css',
+                'dep'       => [],
+                'footer'    => false,
+            ],
+            [
+                'asset'     => 'js/app.js',
+                'dep'       => [],
+                'footer'    => true,
+            ],
+        ],
 
     ],
 
@@ -70,15 +72,15 @@ return [
         'securityKey'   => '',
         // FallBack Driver
         'fallback'      => [
-                            'memcache'  =>  'files',
-                            'apc'       =>  'sqlite',
-                        ],
+            'memcache'  =>  'files',
+            'apc'       =>  'sqlite',
+        ],
         // .htaccess protect
         'htaccess'      => true,
         // Default Memcache Server
         'server'        => [
-                            [ '127.0.0.1', 11211, 1 ],
-                        ],
+            [ '127.0.0.1', 11211, 1 ],
+        ],
 
     ],
 
