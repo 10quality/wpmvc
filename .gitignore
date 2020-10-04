@@ -15,4 +15,5 @@ package-lock.json
 .DS_Store
 
 # Env files
+phpunit.json
 wordpress-org.json
