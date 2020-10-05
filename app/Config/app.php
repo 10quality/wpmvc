@@ -19,7 +19,9 @@ return [
 
         // Enables or disables auto-enqueue of assets
         'enabled'       => true,
-        // Assets to auto-enqueue
+        // Enqueue priority
+        'priority'      => 10,
+        // Assets to auto-enqueue or auto-register
         'assets'        => [
             [
                 'asset'     => 'css/app.css',
