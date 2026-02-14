@@ -1,0 +1,8 @@
+{
+  "label": "Advanced",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "In WordPress MVC (WPMVC), assets and resources — including CSS, JavaScript, images, fonts, SVGs, and other static files — are organized in a dedicated `/assets` folder at the root of your plugin or theme. This structure keeps all frontend and admin-facing files neatly separated from PHP logic, making them easy to manage, version, and deploy.."
+  }
+}

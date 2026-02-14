@@ -1,0 +1,8 @@
+{
+  "label": "Http",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "The Http layer in WordPress MVC provides secure, elegant wrappers around WordPress's native request and response handling. Through the `Request` and `Response` classes, the framework abstracts `$_GET`, `$_POST`, `$_REQUEST`, headers, cookies, files, and server variables, while automatically applying sanitization, nonce/CSRF validation, input filtering, and type casting. This layer lets you interact with incoming data and outgoing responses in a consistent, object-oriented way — reducing boilerplate, preventing common security pitfalls, and making your controllers cleaner and more testable — all while staying fully compatible with WordPress hooks and globals."
+  }
+}
