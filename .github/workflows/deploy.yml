@@ -10,6 +10,10 @@ env:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read # Default read permission
+      pages: write # Grants write permission specifically for GitHub Pages
+      id-token: write 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -28,6 +32,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # github_token: ${{ secrets.GITHUB_TOKEN }}
           # personal_token: ${{ secrets.ACCESS_TOKEN }}
           publish_dir: ./build # Docusaurus build output
