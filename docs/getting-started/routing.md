@@ -23,7 +23,7 @@ Ayuco generates this file during setup, and you can modify it to register all yo
 
 Here's a typical `app/Main.php` after Ayuco setup:
 
-```php
+```php title="app/Main.php" showLineNumbers
 <?php
 /**
  * Main entry point and hooks router.
@@ -108,11 +108,16 @@ These wrappers ensure MVC compatibility and auto-resolve callbacks.
 
 ## Accessing the Main Instance
 
-Globally retrieve the Main instance:
+Globally retrieve the Main instance, on a plugin:
 
 ```php
-$main = get_bridge('MyAwesome\\Plugin');  // Or 'theme' for themes
-$main->add_action(...);  // Dynamic additions if needed
+$main = get_bridge( 'MyAwesomePlugin' );  // Or 'theme' for themes
+$main->add_action( ... );  // Dynamic additions if needed
+```
+
+Or on a theme:
+```php
+$main = get_bridge( 'theme' );
 ```
 
 ## Removing Hooks
@@ -120,19 +125,19 @@ $main->add_action(...);  // Dynamic additions if needed
 Use the framework's remove methods:
 
 ```php
-$this->remove_action('init', 'ConfigController@init');
-$this->remove_filter('the_content', 'PostController@the_content');
+$this->remove_action( 'init', 'ConfigController@init' );
+$this->remove_filter( 'the_content', 'PostController@the_content' );
 ```
 
 Or globally:
 
 ```php
-get_bridge('MyAwesome\\Plugin')->remove_action('hook', 'callback');
+get_bridge( 'MyAwesomePlugin' )->remove_action( 'hook', 'callback' );
 ```
 
 ## Best Practices
 
-* Organize by context: Use `init()`` for frontend/global, `on_admin()`` for backend.
+* Organize by context: Use `init()` for frontend/global, `on_admin()` for backend.
 * Delegate complex logic: Keep `Main` focused on registration; put business logic in controllers.
 * Use Ayuco: Commands like `php ayuco add action:init ConfigController@init` auto-add to Main.php.
 * Flush rewrites: On activation (use register_activation_hook() in your main plugin file).

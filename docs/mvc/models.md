@@ -84,7 +84,7 @@ Useful for review systems or threaded notes.
 
 Generated models typically look like this (example for a custom or post model):
 
-```php title="app/Models/Book.php"
+```php title="app/Models/Book.php" showLineNumbers
 <?php
 
 namespace MyAwesomePlugin\Models;

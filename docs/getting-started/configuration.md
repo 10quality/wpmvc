@@ -14,7 +14,7 @@ This is the primary config file. Ayuco populates it with defaults during setup, 
 
 Typical structure after setup:
 
-```php title="app/Config/app/php"
+```php title="app/Config/app/php" showLineNumbers
 <?php
 
 return [
@@ -63,13 +63,13 @@ Use the bridge helper (generated during setup) to read values anywhere in your c
 
 ```php
 // Get a top-level value
-$version = get_bridge('MyAwesomePlugin')->config->get('version');
+$version = get_bridge( 'MyAwesomePlugin' )->config->get( 'version' );
 
 // Nested value with dot notation
-$api_key = get_bridge('MyAwesomePlugin')->config->get('my_custom.api_key');
+$api_key = get_bridge( 'MyAwesomePlugin' )->config->get( 'my_custom.api_key' );
 
 // Default fallback
-$per_page = get_bridge('MyAwesomePlugin')->config->get('my_custom.items_per_page', 10);
+$per_page = get_bridge( 'MyAwesomePlugin' )->config->get( 'my_custom.items_per_page', 10 );
 ```
 
 This returns null if the key doesn't exist (or your fallback).
@@ -79,7 +79,7 @@ This returns null if the key doesn't exist (or your fallback).
 Create additional files in `app/Config/` for better organization (e.g., `api.php`, `database.php`).
 
 Example:
-```php title="app/Config/api.php"
+```php title="app/Config/api.php" showLineNumbers
 <?php
 
 return [
@@ -96,8 +96,8 @@ return [
 
 Load and access it:
 ```php
-$api_config = get_bridge('MyAwesome\\Plugin')->load_config('api');
-$endpoint = $api_config->get('production.endpoint');
+$api_config = get_bridge( 'MyAwesomePlugin' )->load_config( 'api' );
+$endpoint = $api_config->get( 'production.endpoint' );
 ```
 
 ## Environment-Specific Overrides
