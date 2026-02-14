@@ -1,0 +1,8 @@
+{
+  "label": "Database",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "WordPress MVC does not include a database abstraction layer by default. Instead, it integrates seamlessly with WordPress’ native $wpdb API and allows optional use of external packages for more expressive query building. For structured and fluent SQL queries, the framework recommends the separate 10quality/wp-query-builder package, which can be installed via Composer and used independently within your application."
+  }
+}
