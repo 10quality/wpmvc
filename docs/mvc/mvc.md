@@ -42,5 +42,5 @@ WPMVC adapts classic MVC to WP's ecosystem:
 
 Next, dive deeper:
 - [Models](./models.md)
-- [Views](./views.md)
-- [Controllers](./controllers.md)
+- Views
+- Controllers

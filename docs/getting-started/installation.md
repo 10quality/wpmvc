@@ -6,7 +6,7 @@ sidebar_position: 1
 
 WordPress MVC (WPMVC) is installed via **Composer** (for PHP dependencies) and **npm** (for frontend assets/build tools). The framework includes **Ayuco**, a powerful CLI for setup, scaffolding, and commands.
 
-This guide walks you through installing WPMVC as the foundation for a custom plugin or theme. (For add-ons like metaboxer or license-key, see the [Add-ons](./add-ons.md) section after core setup.)
+This guide walks you through installing WPMVC as the foundation for a custom plugin or theme. (For add-ons like metaboxer or license-key, see the Add-ons section after core setup.)
 
 ## Requirements
 
