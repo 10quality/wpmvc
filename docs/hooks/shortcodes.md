@@ -4,7 +4,7 @@ sidebar_position: 7
 
 # Shortcodes
 
-WordPress Shortcodes can be added to the **Main Class** with [Ayuco](/cli/ayuco/index.md) or manually.
+WordPress Shortcodes can be added to the **Main Class** with [Ayuco](/cli/ayuco.md) or manually.
 
 WPMVC provides a wrapper method `$this->add_shortcode()` in the `Main` class (extending `Bridge`), allowing you to register shortcodes cleanly and link them directly to controller methods or views using the `'Controller@method'` or `'view@dot.path.to.view'` syntax.
 

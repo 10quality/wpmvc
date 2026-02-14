@@ -4,7 +4,7 @@ sidebar_position: 10
 
 # Widgets
 
-WordPress [Widgets](https://codex.wordpress.org/WordPress_Widgets) can be registered with [Ayuco](/clic/ayuco.md) or added manually to the [Main Class](/docs/category/hooks).
+WordPress [Widgets](https://codex.wordpress.org/WordPress_Widgets) can be registered with [Ayuco](/cli/ayuco.md) or added manually to the [Main Class](/docs/category/hooks).
 
 WPMVC provides a wrapper method `$this->add_widget()` in the `Main` class (extending `Bridge`), allowing you to register widget classes cleanly and keep all registrations centralized.
 
@@ -19,7 +19,7 @@ php ayuco register widget:{widget}
 Example
 
 ```bashp
-hp ayuco register widget:MyWidget
+php ayuco register widget:MyWidget
 ```
 
 What happens:
