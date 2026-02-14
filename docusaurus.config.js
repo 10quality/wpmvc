@@ -6,6 +6,7 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
+require('dotenv').config(); // or import 'dotenv/config';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
@@ -23,7 +24,7 @@ const config = {
   url: 'https://10quality.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: process.env.BASE_URL || '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -86,7 +87,7 @@ const config = {
       navbar: {
         title: 'WordPress MVC',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'WordPress MVC Logo',
           src: 'img/wpmvc-icon-blue.png',
         },
         items: [
