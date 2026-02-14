@@ -8,30 +8,37 @@ env:
   BASE_URL: '/wpmvc/'
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: read # Default read permission
-      pages: write # Grants write permission specifically for GitHub Pages
-      id-token: write 
+      contents: read
+      pages: write      # Required to deploy to GitHub Pages
+      id-token: write   # Required for OpenID Connect (OIDC) authentication
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 21
-          cache: 'yarn' # Or 'npm'
-          cache-dependency-path: './package-lock.json' # For npm, or './yarn.lock' for yarn
-      - name: Install and Build
-        run: |
-          yarn install
-          yarn build
+          node-version: 18 # Use a compatible Node.js version
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build site
+        run: npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./build # The directory Docusaurus builds to
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          # github_token: ${{ secrets.GITHUB_TOKEN }}
-          # personal_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_dir: ./build # Docusaurus build output
+        id: deployment
+        uses: actions/deploy-pages@v4
