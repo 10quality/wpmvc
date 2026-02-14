@@ -1,69 +1,41 @@
-# WordPress MVC
+# Website
 
-![WordPress MVC Github Banner](https://www.wordpress-mvc.com/wp-content/uploads/2020/01/wpmvc-github-banner.png)
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-[WordPress MVC](https://www.wordpress-mvc.com/) (WPMVC) framework.
-
-The ultimate WordPress framework for custom Themes and Plugins development.
-
-## The Framework
-
-- [Documentation Version 1](https://www.wordpress-mvc.com/v1/)
-
-* [Setup and install](https://www.wordpress-mvc.com/v1/get-started/)
-* [WordPress hooks](https://www.wordpress-mvc.com/v1/main-class/)
-  * [Actions](https://www.wordpress-mvc.com/v1/actions/)
-  * [Filters](https://www.wordpress-mvc.com/v1/filters/)
-  * [Widgets](https://www.wordpress-mvc.com/v1/widgets/)
-  * [Shortcodes](https://www.wordpress-mvc.com/v1/shortcodes/)
-* [MVC](https://www.wordpress-mvc.com/v1/mvc/)
-  * [Models](https://www.wordpress-mvc.com/v1/models/)
-  * [Views](https://www.wordpress-mvc.com/v1/views/)
-  * [Controllers](https://www.wordpress-mvc.com/v1/controllers/)
-* [Assets](https://www.wordpress-mvc.com/v1/assets/)
-* [Deployment](https://www.wordpress-mvc.com/v1/deployment/)
-* [Add-ons](https://www.wordpress-mvc.com/v1/add-ons/)
-
-## Tutorials
-
-- [Tutorial 1: Setup](https://www.wordpress-mvc.com/v1/tutorial-1-setup/)
-- [Tutorial 2: Hello world](https://www.wordpress-mvc.com/v1/tutorial-2-hello-world/)
-- [Tutorial 3: Hooks](https://www.wordpress-mvc.com/v1/tutorial-3-hooks/)
-
-## Install
-
-Download composer dependencies:
+## Installation
 
 ```bash
-composer install --no-plugins
+yarn
 ```
 
-Download npm/node dependencies:
+## Local Development
 
 ```bash
-npm install
+yarn start
 ```
 
-Run setup wizard:
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+## Build
 
 ```bash
-php ayuco setup
+yarn build
 ```
 
-## Update The Framework
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-Update composer dependencies:
+## Deployment
+
+Using SSH:
 
 ```bash
-composer update --no-plugins
+USE_SSH=true yarn deploy
 ```
 
-Update npm/node dependencies:
+Not using SSH:
 
 ```bash
-npm update
+GIT_USER=<Your GitHub username> yarn deploy
 ```
 
-## License
-
-MIT License - (c) 2018 - 2020 [10 Quality](https://www.10quality.com/).
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
