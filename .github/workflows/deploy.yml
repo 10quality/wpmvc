@@ -4,9 +4,6 @@ on:
   push:
     branches: [gh-pages]
 
-env:
-  BASE_URL: '/wpmvc/'
-
 jobs:
   deploy:
     environment:
@@ -32,6 +29,8 @@ jobs:
 
       - name: Build site
         run: npm run build
+        env:
+          BASE_URL: '/wpmvc/'
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
