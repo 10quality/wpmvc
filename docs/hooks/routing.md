@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Hooks & Routing
+# Router
 
 > The Role of app/Main.php
 
@@ -133,6 +133,49 @@ Or globally:
 
 ```php
 get_bridge( 'MyAwesomePlugin' )->remove_action( 'hook', 'callback' );
+```
+
+## Wildcards#
+
+Controller methods and views can be accessed directly from the `Main` class by calling dynamic wildcard methods.
+
+Wildcard pattern:
+
+`_{object}_{return}_{handler}`
+
+* `{object}` -> Use `c` for controllers and `v` for views.
+* `{return}` -> Indicates if a return value is expected or not. Use void if no return is expected or return if otherwise.
+* `{handler}` -> View or controller handler.
+
+Examples:
+
+```php
+/**
+* In a "theme" project and using global variable $theme.
+* The following example will call to method "do_setup"
+* in controller "AppController".
+*/
+get_bridge( 'theme' )->{'_c_void_AppController@do_setup'}()
+/**
+* In a "plugin" project and using global variable $myplugin.
+* The following example will call to method "get_config"
+* in controller "AppController" and set its returned value
+* to variable "$config".
+*
+* Additianlly, "$param1" is sent as function parameter.
+*/
+$config = get_bridge( 'MyPlugin' )->{'_c_return_AppController@get_config'}( $param1 );
+/**
+* In a "theme" project and using global variable $theme.
+* The following example will return view "hello-world" and
+* assign it to variable "$view".
+*/
+$view = get_bridge( 'theme' )->{'_v_return_view@hello-world'}();
+/**
+* In a "plugin" project and using global variable $myplugin.
+* The following example will echo view "hello-world".
+*/
+get_bridge( 'MyPlugin' )->{'_v_void_view@hello-world'}();
 ```
 
 ## Best Practices

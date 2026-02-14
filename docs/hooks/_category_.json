@@ -1,0 +1,8 @@
+{
+  "label": "Hooks",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "In WordPress MVC (WPMVC), routing is hook-based, meaning application flow is triggered and mapped through WordPress actions and filters rather than traditional URL pattern matching, allowing controllers to execute in response to specific WordPress lifecycle events."
+  }
+}
