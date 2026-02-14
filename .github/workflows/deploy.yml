@@ -22,7 +22,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18 # Use a compatible Node.js version
+          node-version: 21 # Use a compatible Node.js version
           cache: npm
 
       - name: Install dependencies
