@@ -95,7 +95,10 @@ class MyController extends Controller
 {
     public function my_function() {
         // get returns view content without printing
-        $view = $this->view->get( 'view.key' );
+        $view = $this->view->get( 'view.key', [
+            'param1' => true,
+            'model' => MyModel::find()
+        ] );
 
         // show prints the view directly
         $this->view->show( 'view.key-2', [

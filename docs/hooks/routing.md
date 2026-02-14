@@ -31,7 +31,7 @@ Here's a typical `app/Main.php` after Ayuco setup:
  * @package MyAwesome\Plugin
  */
 
-namespace MyAwesome\Plugin;
+namespace MyAwesomePlugin;
 
 use WPMVC\Bridge;
 
