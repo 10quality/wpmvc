@@ -5,9 +5,7 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
-
-require('dotenv').config(); // or import 'dotenv/config';
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+import 'dotenv/config';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
