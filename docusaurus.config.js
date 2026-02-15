@@ -10,7 +10,7 @@ import 'dotenv/config';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'WordPress MVC',
-  tagline: 'The Ultimate Framework for Web Artisans Creating Custom Themes and Plugins',
+  tagline: 'The ultimate WordPress framework for custom Themes and Plugins development',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future

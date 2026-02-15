@@ -2,44 +2,100 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faLayerGroup,
+  faSyringe,
+  faCode,
+  faPersonRunning,
+  faTruckRampBox,
+} from '@fortawesome/free-solid-svg-icons';
+import {
+  faWordpress,
+  faGulp,
+  faGithub,
+} from '@fortawesome/free-brands-svg-icons';
+
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'MVC',
+    icon: faLayerGroup,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Implements the <strong>model-view-controller</strong> design pattern.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Dependency Injection',
+    icon: faSyringe,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Implements the dependency injection design pattern using Composer and Npm.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Scaffolding',
+    icon: faCode,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Scaffolding via Ayuco command-line interpreter.
+      </>
+    ),
+  },
+  {
+    title: 'WordPress Integration',
+    icon: faWordpress,
+    description: (
+      <>
+        Complete WordPress integration; supports hooks, widgets and shortcodes.
+      </>
+    ),
+  },
+  {
+    title: 'Gulp',
+    icon: faGulp,
+    description: (
+      <>
+        Gulp (tasker) integration for compilation, compression, and deployment.
+      </>
+    ),
+  },
+  {
+    title: 'Performance',
+    icon: faPersonRunning,
+    description: (
+      <>
+        Optimized for enterprise level performance. Has internal buffering and takes in consideration memory allocation.
+      </>
+    ),
+  },
+  {
+    title: 'Extendable',
+    icon: faTruckRampBox,
+    description: (
+      <>
+        The functionality and features of a project can be easily extended through community-developed add-ons.
+      </>
+    ),
+  },
+  {
+    title: 'Open Sourced',
+    icon: faGithub,
+    description: (
+      <>
+        FREE, powerful, public code visibility and frequently updated.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({icon, title, description}) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+    <div className={clsx('col col--3')}>
+      <div className="text--center margin-bottom--sm">
+        <FontAwesomeIcon icon={icon} size="2xl"/>
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
@@ -49,9 +105,13 @@ function Feature({Svg, title, description}) {
   );
 }
 
-export default function HomepageFeatures() {
+export default function HomepageFeatures(props) {
+    const Style = {
+        '--bg-img': `url(${props.bgUrl})`,
+    };
   return (
     <section className={styles.features}>
+      <div className={styles.underlay} style={Style}></div>
       <div className="container">
         <div className="row">
           {FeatureList.map((props, idx) => (

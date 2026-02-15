@@ -1,11 +1,31 @@
 .features {
+  --bg-color: #fefefe;
+  position: relative;
   display: flex;
   align-items: center;
   padding: 2rem 0;
   width: 100%;
+  background-color: var(--bg-color);
+}
+
+[data-theme='dark'] .features {
+  --bg-color: #09171e !important;
 }
 
 .featureSvg {
   height: 200px;
   width: 200px;
+}
+
+.underlay {
+  background-image: var(--bg-img);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 400px;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

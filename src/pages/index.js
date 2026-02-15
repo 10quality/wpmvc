@@ -3,6 +3,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import HomepageCreateProject from '@site/src/components/HomepageCreateProject';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 import Heading from '@theme/Heading';
@@ -39,6 +40,8 @@ export default function Home() {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
+        <HomepageCreateProject bgUrl={useBaseUrl('/img/wpmvc-icon-blue.png')}/>
+        <HomepageFeatures bgUrl={useBaseUrl('/img/wpmvc-icon-blue.png')}/>
       </main>
     </Layout>
   );

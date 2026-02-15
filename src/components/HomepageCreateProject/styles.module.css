@@ -1,0 +1,39 @@
+.createProject {
+  --bg-color: #fefefe;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--bg-color);
+}
+
+.viaComposer {
+  --color: #333;
+  color: var(--color);
+  font-weight: bold;
+}
+
+.underlay {
+  background-image: var(--bg-img);
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.command {
+  padding: 0.7rem 1.2rem;
+}
+
+[data-theme='dark'] .createProject {
+  --bg-color: #09171e !important;
+}
+
+[data-theme='dark'] .viaComposer {
+  --color: #ccc !important;
+}
