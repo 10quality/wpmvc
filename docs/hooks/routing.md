@@ -6,6 +6,8 @@ sidebar_position: 3
 
 > The Role of app/Main.php
 
+The framework **deliberately does not route requests** in the traditional sense (no full router, no request lifecycle interception like Laravel/Symfony). It routes hooks — which aligns perfectly with WordPress being an event-driven system.
+
 In WordPress MVC (WPMVC), the **`app/Main.php`** file serves as the central **bootstrap** and **hooks router**. It is the main class that connects WordPress with the framework's MVC structure, allowing you to register all actions, filters, shortcodes, and other hooks in one organized place.
 
 By extending the framework's `Bridge` class, `Main` provides wrapper methods like `$this->add_action()` and `$this->add_filter()` that support direct linking to controller methods using the `'Controller@method'` syntax. This keeps your code clean, MVC-compliant, and easy to maintain — no scattered `add_action()` calls across files.
