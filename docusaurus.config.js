@@ -65,7 +65,7 @@ const config = {
       }),
     ],
   ],
-
+  themes: ['@easyops-cn/docusaurus-search-local'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -136,6 +136,11 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.vsDark,
         additionalLanguages: ['php', 'bash', 'json'],
+      },
+      search: {
+        // Optional config
+        maxPreviewChars: 120,
+        // hashed: true, // for cache busting
       },
     }),
 };
