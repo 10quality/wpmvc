@@ -1,6 +1,6 @@
-# Website
+# WordPress MVC Documentation
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This documentation is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
 ## Installation
 
@@ -25,6 +25,10 @@ yarn build
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
 ## Deployment
+
+This repository is configured through GitHub Actions to automatically deploy the documentation to GitHub Pages when changes are pushed to the main branch. However, you can also deploy manually using the following commands.
+
+### Docusaurus Deployment
 
 Using SSH:
 
