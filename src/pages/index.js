@@ -14,7 +14,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <img src={useBaseUrl('/img/wpmvc-icon-blue.png')} alt="WordPress MVC logo"/>
+        <img className={styles.logo} src={useBaseUrl('/img/wpmvc-icon-blue.png')} alt="WordPress MVC logo"/>
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
