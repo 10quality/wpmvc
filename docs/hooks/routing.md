@@ -8,7 +8,7 @@ sidebar_position: 3
 
 The framework **deliberately does not route requests** in the traditional sense (no full router, no request lifecycle interception like Laravel/Symfony). It routes hooks — which aligns perfectly with WordPress being an event-driven system.
 
-In WordPress MVC (WPMVC), the **`app/Main.php`** file serves as the central **bootstrap** and **hooks router**. It is the main class that connects WordPress with the framework's MVC structure, allowing you to register all actions, filters, shortcodes, and other hooks in one organized place.
+In **WordPress MVC** (WPMVC), the **`app/Main.php`** file serves as the central **bootstrap** and **hooks router**. It is the main class that connects WordPress with the framework's MVC structure, allowing you to register all actions, filters, shortcodes, and other hooks in one organized place.
 
 By extending the framework's `Bridge` class, `Main` provides wrapper methods like `$this->add_action()` and `$this->add_filter()` that support direct linking to controller methods using the `'Controller@method'` syntax. This keeps your code clean, MVC-compliant, and easy to maintain — no scattered `add_action()` calls across files.
 
@@ -79,14 +79,14 @@ class Main extends Bridge
 
 Key elements:
 
-* Extends Bridge: Provides the `$this->add_*()`` methods.
+* Extends Bridge: Provides the `$this->add_*()` methods.
 * `init()` Method: Often hooked to WordPress's 'init' action internally by the framework. Use it for global registrations.
 * `on_admin()` Method: For admin-area hooks (auto-called in admin context).
 * Callback Syntax:
-  * Controllers: `'ControllerClass@method'`` — Resolves to the method in the specified controller.
+  * Controllers: `'ControllerClass@method'` — Resolves to the method in the specified controller.
   * Views: `'view@view.key'` — Renders the view file (e.g., `assets/views/view/key.php`).
   * Optional third argument: Array of parameters to pass (e.g., `['param1', 'param2']` maps WP hook args to callback).
-* The framework handles resolving the string to the actual callable (e.g., [new ControllerClass, 'method']).
+* The framework handles resolving the string to the actual callable (e.g., `[new ControllerClass, 'method']`).
 
 ## How Routing Works
 
@@ -185,7 +185,7 @@ get_bridge( 'MyPlugin' )->{'_v_void_view@hello-world'}();
 * Organize by context: Use `init()` for frontend/global, `on_admin()` for backend.
 * Delegate complex logic: Keep `Main` focused on registration; put business logic in controllers.
 * Use Ayuco: Commands like `php ayuco add action:init ConfigController@init` auto-add to Main.php.
-* Flush rewrites: On activation (use register_activation_hook() in your main plugin file).
-* Debug: Check if hooks fire with error_log() or tools like Query Monitor.
+* Flush rewrites: On activation (use `register_activation_hook()` in your main plugin file).
+* Debug: Check if hooks fire with `error_log()` or tools like Query Monitor.
 
 `app/Main.php` is your project's command center — use it to route WordPress hooks elegantly into your MVC flow.

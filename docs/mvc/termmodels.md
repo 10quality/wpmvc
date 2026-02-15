@@ -94,8 +94,6 @@ Arguably, the most powerful feature in a model. The `$aliases` property serves a
 ### Definition sample
 
 ```php title="app/Models/MyTerm.php" showLineNumbers
-<?php
-
 use WPMVC\MVC\Traits\FindTermTrait;
 use WPMVC\MVC\Models\TermModel as Model;
 

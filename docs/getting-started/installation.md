@@ -117,9 +117,9 @@ npm run build
 ## Next Steps
 You've got the foundation! Now explore:
 
-* Configuration – App settings, env, add-ons
-* Ayuco – CLI commands for scaffolding, caching, etc.
-* Controllers & Routing
-* Models & Database
-* Views & Templating
-* Assets & Gulp
+* [Configuration](./configuration.md) – App settings, env, add-ons
+* [Ayuco](/cli/ayuco.md) – CLI commands for scaffolding, caching, etc.
+* [Hooks & Routing](/docs/category/hooks)
+* [Models](/mvc/models.md)
+* [Views & Templating](/mvc/views.md)
+* [Assets & Gulp](/resources/assets.md)

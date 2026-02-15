@@ -6,7 +6,7 @@ sidebar_position: 1
 
 > The Command-Line Powerhouse for WordPress MVC
 
-Ayuco is the built-in **command-line interface (CLI)** for WordPress MVC (WPMVC). It serves as the primary scaffolding tool, allowing you to rapidly generate boilerplate code, register components, add hooks, configure project settings, and more — all while following the framework's conventions.
+Ayuco is the built-in **command-line interface (CLI)** for **WordPress MVC** (WPMVC). It serves as the primary scaffolding tool, allowing you to rapidly generate boilerplate code, register components, add hooks, configure project settings, and more — all while following the framework's conventions.
 
 Think of Ayuco as your artisan assistant: it automates repetitive tasks so you can focus on crafting high-quality custom themes and plugins.
 

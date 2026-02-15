@@ -24,7 +24,7 @@ php ayuco register widget:MyWidget
 
 What happens:
 
-* Ayuco creates a new folder called Widgets inside the framework's app folder (`app/Widgets/``).
+* Ayuco creates a new folder called Widgets inside the framework's app folder (`app/Widgets/`).
 * It generates the widget class file (e.g., `app/Widgets/MyWidget.php`) with boilerplate extending WP_Widget.
 * It automatically registers the widget in `Main.php` using `$this->add_widget('MyWidget')`.
 
@@ -39,7 +39,7 @@ Register widgets with Ayuco solves many issues, such as loading classes under no
 
 ### Manual Registration
 
-You can add widget classes manually by calling `$this->add_widget()`` in the `Main` class (typically inside the `init()`` method).
+You can add widget classes manually by calling `$this->add_widget()` in the `Main` class (typically inside the `init()` method).
 
 ```php title="app/Mail.php" showLineNumbers
 <?php
@@ -68,7 +68,7 @@ When a widget is registered using Ayuco, it is defined in the Main Class same as
 ## Best Practices
 
 * Prefer Ayuco for registration to avoid namespace/autoloading issues.
-* Place widget classes in `app/Widgets/`` for organization (Ayuco does this automatically).
+* Place widget classes in `app/Widgets/` for organization (Ayuco does this automatically).
 * Use the widget in WP Admin → Appearance → Widgets to test.
 * For advanced widgets (with fields, settings), extend the form/update methods.
 

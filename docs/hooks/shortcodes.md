@@ -27,7 +27,7 @@ php ayuco add shortcode:hello_world view@shortcodes.hello-world
 
 In the command above, Ayuco will add WordPress shortcode **“[hello-world]”** to the project and will establish view “shortcodes.hello-world” as the handler.
 
-> Ayuco Is Awesome
+> **Ayuco Is Awesome**
 > If no handler is defined, Ayuco will default it to “AppController”.
 > If the defined controller in the command doesn’t exist then Ayuco will create it.
 > If the defined controller’s method in the command doesn’t exist then Ayuco will create it.
@@ -35,7 +35,7 @@ In the command above, Ayuco will add WordPress shortcode **“[hello-world]”**
 
 ## Add Manually
 
-Shortcodes can be added manually by defining them in the Main Class (typically inside the `init()`` method).
+Shortcodes can be added manually by defining them in the Main Class (typically inside the `init()` method).
 
 Syntax
 
@@ -43,7 +43,7 @@ Syntax
 $this->add_shortcode( string $tag, string $handler );
 ```
 
-* `$tag` — The shortcode name (without brackets, e.g., `'hello_world'`` for `[hello_world]`).
+* `$tag` — The shortcode name (without brackets, e.g., `'hello_world'` for `[hello_world]`).
 * `$handler` — `'Controller@method'` or `'view@dot.path.to.view'`.
 
 ## Example in Main.php

@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Custom Command
 
-You can extend Ayuco with your own commands.
+You can extend [Ayuco](./ayuco.md) with your own commands.
 
 1. Create a command class (extend Ayuco's base if needed).
 2. Register it in the `ayuco` file (between `// BEGIN - Custom commands` and `// END - Custom commands`):

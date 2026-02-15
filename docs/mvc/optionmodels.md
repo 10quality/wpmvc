@@ -43,7 +43,7 @@ Use the `find()` method to retrieve the model loaded with data.
 
 ## Save
 
-Saving the information of a model is a piece of cake. Simply call the `save()`` method after changing its attributes. This will insert or update the record in the database.
+Saving the information of a model is a piece of cake. Simply call the `save()` method after changing its attributes. This will insert or update the record in the database.
 
 ## Aliases
 

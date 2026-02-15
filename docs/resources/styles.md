@@ -159,7 +159,7 @@ gulp.task('less', async function () {
 });
 ```
 
-Custom **gulp** compilation tasks must be added to the file [project]/package.json, see the example below:
+Custom **gulp** compilation tasks must be added to the file `[project]/package.json`, see the example below:
 
 ```json title="package.json"
 {

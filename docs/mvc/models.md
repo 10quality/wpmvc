@@ -23,6 +23,14 @@ For custom data, you create models backed by your own tables. This eliminates ra
 - Ayuco scaffolding generates boilerplate quickly.
 - Extensible for validations, relationships, and custom logic.
 
+## Storage Path
+
+Views are stored under the project’s view directory. For example:
+
+```bash
+[project]/app/Models/
+```
+
 ## Creating Models with Ayuco
 
 Use Ayuco to generate the right model type based on your data source. Run these from your project root.
@@ -132,8 +140,7 @@ $settings->save();
 ## Advanced Usage Tips
 
 * Meta Handling: Core-backed models (posts, users, etc.) automatically sync meta fields as object properties.
-* Relationships: Define in the model (e.g., has_many, belongs_to) if supported — check your version or extend manually.
-* Custom Queries: Use where(), order_by(), or pass WP_Query args to find()/all().
+* Relationships: Define in the model (e.g., `has_many`, `belongs_to`) if supported — check your version or extend manually.
 * Callbacks/Validations: Add methods like before_save(), after_create() for logic.
 
 Models are the data foundation of your WPMVC project — by leveraging WordPress core models out-of-the-box, you avoid reinventing the wheel and focus on custom business logic.

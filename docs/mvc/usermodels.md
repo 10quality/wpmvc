@@ -61,8 +61,6 @@ Arguably, the most powerful feature in a model. The `$aliases` property serves a
 ### Definition sample
 
 ```php title="app/Models/UserModel.php" showLineNumbers
-<?php
-
 use WPMVC\MVC\Traits\FindTrait;
 use WPMVC\MVC\Models\UserModel as Model;
 

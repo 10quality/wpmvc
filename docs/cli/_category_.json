@@ -3,6 +3,6 @@
   "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "Command-line interface for WordPress MVC."
+    "description": "Ayuco is the built-in command-line interface that powers rapid development in WordPress MVC. It serves as your artisan companion, letting you scaffold projects, generate controllers, models, views, assets, shortcodes, widgets, and more, while handling configuration updates, hook registration, cache management, translation file creation, and other repetitive tasks — all directly from the terminal. By automating boilerplate and enforcing conventions, Ayuco streamlines your workflow, reduces errors, and keeps your code organized and WordPress-native, so you can focus on crafting elegant plugins and themes."
   }
 }

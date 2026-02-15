@@ -4,7 +4,7 @@ sidebar_position: 10
 
 # Configuration
 
-After running the Ayuco setup wizard (`php ayuco setup`), WordPress MVC (WPMVC) generates a clean, extensible configuration system in the `app/Config/` folder. This lets you control core behavior, add custom settings, override for environments, and integrate add-ons — all without touching WordPress core files.
+After running the [Ayuco](/cli/ayuco.md) setup wizard (`php ayuco setup`), **WordPress MVC** (WPMVC) generates a clean, extensible configuration system in the `app/Config/` folder. This lets you control core behavior, add custom settings, override for environments, and integrate add-ons — all without touching WordPress core files.
 
 The framework uses plain PHP files that **return arrays**, making configuration simple, type-safe, and IDE-friendly.
 
@@ -143,7 +143,7 @@ After adding, the add-on activates automatically on the next load. Check add-on 
 * Use Ayuco for initial setup — It handles namespace, metadata, and boilerplate reliably (`php ayuco set version:2.0.0`, `php ayuco set namespace:NewNamespace`, etc.).
 * Keep configs lean — Put one-off or rarely changed values in `app.php`; group related settings in custom files.
 * Secure secrets — Never hardcode keys; use defines, `.env`, or WordPress options for production.
-* Cache awareness — If disabling cache ('cache' => ['enabled' => false]), run `php ayuco cache:clear` after changes.
+* Cache awareness — If disabling cache (`'cache' => ['enabled' => false]`), run `php ayuco cache:clear` after changes.
 * Version control — Commit the config structure (with placeholder values), ignore sensitive overrides.
 
 Your configuration is now set up for clean, maintainable, and scalable development — the artisan way.

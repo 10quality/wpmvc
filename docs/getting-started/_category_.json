@@ -3,6 +3,6 @@
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Getting Started with WordPress MVC."
+    "description": "The Getting Started section guides you through the initial setup and first steps with WordPress MVC (WPMVC). It covers installing the framework via Composer, running the Ayuco setup wizard to scaffold your plugin or theme, configuring basic settings (namespace, text domain, version, assets), understanding the project structure, and compiling your first assets with Gulp/npm. Designed for developers who want to quickly move from a blank slate to a structured, maintainable codebase, this category provides clear, step-by-step instructions so you can start building elegant custom plugins and themes in minutes — without fighting WordPress boilerplate or reinventing common patterns."
   }
 }

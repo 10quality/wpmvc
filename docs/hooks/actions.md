@@ -42,7 +42,7 @@ What happens:
 
 ## Adding Actions Manually
 
-You can register actions directly in the `Main` class (typically inside the `init()`` or `on_admin()` methods).
+You can register actions directly in the `Main` class (typically inside the `init()` or `on_admin()` methods).
 
 Syntax
 
@@ -52,8 +52,8 @@ $this->add_action( string $hook, string $handler, int $priority = 10, int $accep
 
 * `$hook` — The action name (same as WP).
 * `$handler` — `'Controller@method'` or `'view@dot.path.to.view'`.
-* `$priority` — Execution order (default 10).
-* `$accepted_args` — Number of arguments the callback expects (default 1).
+* `$priority` — Execution order (default `10`).
+* `$accepted_args` — Number of arguments the callback expects (default `1`).
 
 ## Example in Main.php
 
@@ -93,7 +93,7 @@ $this->add_action( 'woocommerce_thankyou', 'view@woocommerce.thankyou', ['order_
 
 This passes the `$order_id` from the `woocommerce_thankyou` hook to your view or controller.
 
-For full WP compatibility, the method supports `$priority` and `$accepted_args` just like native `add_action()``.
+For full WP compatibility, the method supports `$priority` and `$accepted_args` just like native `add_action()`.
 
 ## Related Resources
 

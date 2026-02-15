@@ -104,7 +104,7 @@ Add to `package.json` as needed:
 
 ## Best Practices
 
-* Store raw, unminified JS in `/assets/raw/js/`` — let Gulp handle concatenation/minification.
+* Store raw, unminified JS in `/assets/raw/js/` — let Gulp handle concatenation/minification.
 * Use subfolders (e.g., `admin/`, `frontend/`) for context-specific scripts → auto-generates admin.js, etc.
 * Prefer Ayuco for quick file creation and registration.
 * For production, run `gulp build` to get minified, concatenated `app.js` (and subfolder equivalents).

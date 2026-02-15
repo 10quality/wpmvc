@@ -26,7 +26,7 @@ php ayuco create controller:{Controller@method}
 
 * `{Controller@method}` — the controller class name
 
-Additional methods can be defined with extra @method segments.
+Additional methods can be defined with extra `@method` segments.
 
 Examples
 
@@ -181,4 +181,4 @@ class MyController extends Controller
 }
 ```
 
-Enabling $autosave allows the on_save method to be invoked even during WP autosave events.
+Enabling $autosave allows the `on_save` method to be invoked even during WP autosave events.

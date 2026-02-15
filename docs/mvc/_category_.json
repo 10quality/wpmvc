@@ -3,6 +3,6 @@
   "position": 5,
   "link": {
     "type": "generated-index",
-    "description": "MVC (Model View Controller)."
+    "description": "The MVC category explores WordPress MVC’s core architectural pattern — Model-View-Controller — adapted to enhance WordPress without overriding its hook-based, event-driven nature. It covers how Models manage data and logic (wrapping WordPress core tables or custom ones), Views handle presentation (plain PHP templates in assets/views/), and Controllers coordinate actions (preparing data and delegating rendering via $this->view->get()). This section provides practical guidance on maintaining clean separation of concerns, using Ayuco to generate components, and building scalable, maintainable plugins and themes while staying fully compatible with WordPress."
   }
 }

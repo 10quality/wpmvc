@@ -53,8 +53,8 @@ $this->add_filter( string $hook, string $handler, int $priority = 10, int $accep
 
 * `$hook` — The filter name (same as WP).
 * `$handler` — `'Controller@method'` or `'view@dot.path.to.view'`.
-* `$priority` — Execution order (default 10; lower numbers run earlier).
-* `$accepted_args` — Number of arguments the callback expects (default 1).
+* `$priority` — Execution order (default `10`; lower numbers run earlier).
+* `$accepted_args` — Number of arguments the callback expects (default `1`).
 
 ## Example in Main.php
 
