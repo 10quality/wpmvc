@@ -32,6 +32,11 @@ To compile assets from the raw folder:
 gulp dev
 ```
 
+Or alias:
+```bash
+npm run dev
+```
+
 ## Watch
 
 The framework provides watch tasks to auto-compile raw files on changes:
@@ -40,6 +45,11 @@ The framework provides watch tasks to auto-compile raw files on changes:
 * `gulp watch-styles`: Watch only style changes (CSS/SASS/SCSS).
 * `gulp watch-sass`: Watch only SASS/SCSS changes.
 * `gulp watch-js`: Watch only JS changes.
+
+Or alias:
+```bash
+npm run watch
+```
 
 ## Auto-enqueue
 
@@ -115,10 +125,20 @@ To compile assets for production, minify, remove development files, and prepare 
 gulp build
 ```
 
+Or alias:
+```bash
+npm run build
+```
+
 For deployment without ZIP (e.g., for CI/CD), output to `[project]/builds/deploy`:
 
 ```bash
 gulp deploy
+```
+
+Or alias:
+```bash
+npm run deploy
 ```
 
 Deployment result: Assets in `/assets/js` and `/assets/css` are minified; unnecessary files and development vendor packages are excluded.

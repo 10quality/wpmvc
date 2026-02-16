@@ -12,8 +12,9 @@ This guide walks you through installing WPMVC as the foundation for a custom plu
 
 - **PHP** ≥ 7.4 (recommended: 8.0+ for best compatibility)
 - **WordPress** ≥ 5.8 (latest stable recommended)
-- **Composer** (global or local)
-- **Node.js** ≥ 14 and **npm** ≥ 7 (for asset compilation with Gulp)
+- **Composer** ([global](https://getcomposer.org/) or local)
+- **Gulp CLI** ([global](https://gulpjs.com/docs/en/getting-started/quick-start/#install-the-gulp-command-line-utility))
+- **Node.js** ≥ 24 and **npm** ≥ 11 ([global](https://nodejs.org/en) for asset compilation with Gulp)
 - WordPress site with write access to the `wp-content/plugins/` or `wp-content/themes/` folder
 
 ## Step 1: Create a New Project Folder
