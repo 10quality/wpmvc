@@ -25,7 +25,7 @@ Example
 php ayuco add shortcode:hello_world view@shortcodes.hello-world
 ```
 
-In the command above, Ayuco will add WordPress shortcode **“[hello-world]”** to the project and will establish view “shortcodes.hello-world” as the handler.
+In the command above, Ayuco will add WordPress shortcode **“[hello_world]”** to the project and will establish view “shortcodes.hello-world” as the handler.
 
 > **Ayuco Is Awesome**
 > If no handler is defined, Ayuco will default it to “AppController”.
