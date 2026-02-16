@@ -12,7 +12,7 @@
 // Prepare
 var fs = require('fs');
 var gulp = require('gulp');
-var wpmvc = require('gulp-wpmvc');
+var wpmvc = require('@10quality/gulp-wpmvc');
 
 // Load package JSON as config file.
 var config = JSON.parse(fs.readFileSync('./package.json'));

@@ -1,8 +1,14 @@
 {
   "name": "my-app",
   "version": "1.0.0",
+  "scripts": {
+    "build": "gulp build",
+    "deploy": "gulp deploy",
+    "dev": "gulp dev",
+    "watch": "gulp watch"
+  },
   "dependencies": {
-    "gulp": "4.0.2",
-    "gulp-wpmvc": "^1.3.*"
+    "@10quality/gulp-wpmvc": "1.4.0",
+    "gulp": "4.0.2"
   }
 }

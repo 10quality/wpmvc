@@ -26,6 +26,12 @@ Download npm/node dependencies:
 npm install
 ```
 
+Install Gulp:
+
+```bash
+npm install -g gulp-cli
+```
+
 Run setup wizard:
 
 ```bash
@@ -48,4 +54,4 @@ npm update
 
 ## License
 
-MIT License - (c) 2018 - 2020 [10 Quality](https://www.10quality.com/).
+MIT License - (c) 2018 - 2026 [10 Quality](https://10quality.github.io/wpmvc).
