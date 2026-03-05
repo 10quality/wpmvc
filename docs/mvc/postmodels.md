@@ -17,10 +17,11 @@ The model's attributes (or data columns) can be accessed as object properties.
 Use when the post type related to the model is already defined in WordPress (e.g., pages, posts, attachments).
 
 ```bash
-php ayuco create model:{model}
+php ayuco create model:{model} {type}
 ```
 
 * `{model}` -> The name of the class model to be created.
+* `{type}` -> (Optional) The post type of the class model to be created. Defaults to "post" if not specified.
 
 ### Register Command
 
