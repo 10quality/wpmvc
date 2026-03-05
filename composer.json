@@ -17,6 +17,7 @@
         "10quality/wpmvc-commands": "1.1.*"
     },
     "config": {
+        "autoloader-suffix": "MyApp",
         "optimize-autoloader": true,
         "sort-packages": true
     },
