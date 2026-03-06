@@ -70,7 +70,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/wpmvc-banner.jpg',
+      metadata: [
+        {name: 'keywords', content: 'wpmvc, mvcgenerator, wordpress, framework, plugin, theme, development'},
+      ],
       colorMode: {
         respectPrefersColorScheme: true,
       },
