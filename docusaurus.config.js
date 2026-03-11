@@ -89,7 +89,8 @@ const config = {
         accessMode: 'textual',
         creator: {
           '@type': 'Organization',
-          name: '10 Quality Studio S.R.L.',
+          name: '10 Quality',
+          legalName: '10 Quality Studio S.R.L.',
           address: 'San Jose, Costa Rica',
           url: 'https://10quality.studio',
         },
@@ -110,6 +111,8 @@ const config = {
       image: 'img/wpmvc-banner.jpg',
       metadata: [
         {name: 'keywords', content: 'wpmvc, mvcgenerator, wordpress, framework, plugin, theme, development'},
+        {name: 'description', content: 'xd'},
+        {property: 'og:description', content: 'xd'},
       ],
       colorMode: {
         respectPrefersColorScheme: true,
