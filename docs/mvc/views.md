@@ -1,5 +1,13 @@
 ---
 sidebar_position: 20
+title: Views
+description: Learn how views work in the WordPress MVC Framework (WPMVC) to render templates and separate presentation from logic in WordPress plugins and themes.
+keywords: [wordpress mvc views, wordpress template mvc, wordpress plugin template structure, wordpress mvc view rendering, wordpress theme mvc templates]
+---
+
+<head>
+  <title>WordPress MVC Views – Rendering Templates for Plugins and Themes</title>
+</head>
 ---
 
 # Views
@@ -16,7 +24,7 @@ A view file:
 
 ## Storage Path
 
-Views are stored under the project’s view directory. For example:
+[Views](mvc/views.md) are stored under the project’s view directory. For example:
 
 ```bash
 [path to project]/assets/views/
@@ -58,12 +66,12 @@ A simple view could look like this:
   <p><?php echo $book->description ?></p>
 </div>
 ```
-
+Views often include frontend resources such as [styles](resources/styles.md) and [scripts](resources/js.md) managed through the [Assets](resources/assets.md) system. 
 ## Parameters
 
 All view invocation methods allow passing parameters as an associative array. These keys are converted into PHP variables available inside the view.
 
-Example of passing parameters from a controller:
+Example of passing parameters from a [Controller](mvc/controllers.md):
 
 ```php
 // Call a view and pass parameters

@@ -1,5 +1,13 @@
 ---
 sidebar_position: 2
+title: Models
+description: Learn how to use models in the WordPress MVC Framework (WPMVC) to manage data and business logic when building structured WordPress plugins and themes.
+keywords: [wordpress mvc model, wordpress plugin model example, wordpress mvc theme development, wordpress mvc framework models, mvc data layer wordpress, wordpress plugin and theme architecture]
+---
+
+<head>
+  <title>WordPress MVC Models – Data Layer for Plugins and Themes</title>
+</head>
 ---
 
 # Models
@@ -19,7 +27,7 @@ For custom data, you create models backed by your own tables. This eliminates ra
 
 - Automatic handling of WordPress core tables and meta data.
 - Consistent CRUD operations across data types.
-- Easy integration with controllers and views.
+- Easy integration with [controller](mvc/controllers.md) and [views](mvc/views.md).
 - Ayuco scaffolding generates boilerplate quickly.
 - Extensible for validations, relationships, and custom logic.
 

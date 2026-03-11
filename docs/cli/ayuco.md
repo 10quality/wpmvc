@@ -1,5 +1,13 @@
 ---
 sidebar_position: 1
+title: Ayuco
+description: Learn how to use the WordPress MVC CLI (Ayuco) to generate plugins, themes, controllers, and models with automated scaffolding.
+keywords: [wordpress plugin generator, wordpress cli scaffolding, wordpress mvc cli, generate wordpress plugin mvc, wordpress scaffolding tool]
+---
+
+<head>
+  <title>WordPress MVC CLI (Ayuco) – Generate Plugins and Themes with Scaffolding</title>
+</head>
 ---
 
 # Ayuco

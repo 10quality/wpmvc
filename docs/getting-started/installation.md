@@ -1,6 +1,13 @@
 ---
 sidebar_position: 1
+title: Installation
+description: Learn how to install the WordPress MVC Framework (WPMVC) using Composer and npm. Set up MVC architecture for WordPress plugins and themes step by step.
+keywords: [install wordpress mvc framework, wordpress mvc composer install, setup wordpress mvc plugin framework, wordpress mvc installation, wordpress mvc tutorial, wordpress mvc theme development, wordpress mvc installation guide, wordpress plugin mvc framework]
 ---
+
+<head>
+  <title>How to Install the WordPress MVC Framework (Step-by-Step)</title>
+</head>
 
 # Installation
 
@@ -72,7 +79,7 @@ This installs Gulp, Sass, Babel, etc., based on the included `package.json`.
 
 ## Step 4: Run the Setup Wizard (Ayuco)
 
-Ayuco is the CLI powerhouse for WPMVC. It configures your project (namespace, type: plugin/theme, etc.) and generates boilerplate.
+[Ayuco](cli/ayuco.md) is the CLI powerhouse for WPMVC. It configures your project (namespace, type: plugin/theme, etc.) and generates boilerplate.
 
 Run:
 
