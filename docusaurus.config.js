@@ -111,19 +111,12 @@ const config = {
       image: 'img/wpmvc-banner.jpg',
       metadata: [
         {name: 'keywords', content: 'wpmvc, mvcgenerator, wordpress, framework, plugin, theme, development'},
-      ]
-      metadata: [
-    {name: "robots", content: "index, follow"}
+        {name: "robots", content: "index, follow"},
+        {name: "google-site-verification", content: "google95c76bc0da66e5b0.html"},
+      ],
       colorMode: {
         respectPrefersColorScheme: true,
       },
-        metadata: [
-    {
-      name: "google-site-verification",
-      content: "google95c76bc0da66e5b0.html",
-    },
-  ],
-}
       navbar: {
         title: 'WordPress MVC',
         logo: {
