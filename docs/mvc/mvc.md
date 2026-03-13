@@ -24,7 +24,7 @@ WPMVC adapts classic MVC to WP's ecosystem:
 - **[Assets](resources/assets.md)** (CSS/JS) are enqueued via [controllers](mvc/controllers.md) or config.
 - **Add-ons** extend this pattern (e.g., metaboxes auto-generate from Models).
 
-### Request Flow Example
+## Request Flow Example
 1. User visits `/my-custom-page/` or triggers an admin action.
 2. WP fires a hook → WPMVC Controller catches it.
 3. Controller queries Model(s) for data.

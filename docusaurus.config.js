@@ -130,6 +130,7 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
+          {to: '/about', label: 'About', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/10quality/wpmvc',
