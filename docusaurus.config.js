@@ -9,7 +9,7 @@ import 'dotenv/config';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'WordPress MVC',
+  title: 'WordPress MVC framework (WPMVC)',
   tagline: 'The ultimate WordPress framework for custom Themes and Plugins development',
   favicon: 'img/favicon.ico',
 
@@ -111,8 +111,6 @@ const config = {
       image: 'img/wpmvc-banner.jpg',
       metadata: [
         {name: 'keywords', content: 'wpmvc, mvcgenerator, wordpress, framework, plugin, theme, development'},
-        {name: 'description', content: 'xd'},
-        {property: 'og:description', content: 'xd'},
       ],
       colorMode: {
         respectPrefersColorScheme: true,

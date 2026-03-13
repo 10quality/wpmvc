@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import HomepageCreateProject from '@site/src/components/HomepageCreateProject';
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -36,8 +37,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`WPMVC`}
-      description="Description will go into a meta tag in <head />">
+      title="Welcome"
+      description="WordPress MVC is a powerful framework that brings the Model-View-Controller (MVC) architecture to WordPress development. It provides a structured and organized way to build custom themes and plugins, making it easier for developers to create maintainable and scalable WordPress applications.">
       <HomepageHeader />
       <main>
         <HomepageCreateProject bgUrl={useBaseUrl('/img/wpmvc-icon-blue.png')}/>
