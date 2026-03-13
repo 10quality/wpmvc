@@ -1,5 +1,13 @@
 ---
 sidebar_position: 10
+title: Controllers
+description: Learn how to create controllers in the WordPress MVC Framework (WPMVC). Organize plugin logic using MVC architecture for scalable WordPress development. 
+keywords: [wordpress mvc controller, wordpress plugin controller example, mvc controller wordpress, wordpress mvc framework controllers, wordpress mvc development]
+---
+
+<head>
+  <title>WordPress MVC Controllers – Build Structured Plugin Logic with WPMVC</title>
+</head>
 ---
 
 # Controllers
@@ -18,7 +26,7 @@ Each controller corresponds to a PHP class that typically extends the base `Cont
 
 ## Generating Controllers (Ayuco)
 
-Use the Ayuco CLI tool to create controllers and methods easily:
+Use the [Ayuco](cli/ayuco.md) tool to create controllers and methods easily:
 
 ```bash
 php ayuco create controller:{Controller@method}
@@ -57,12 +65,12 @@ class MyController extends Controller
 
 Controllers extend the core `Controller` class provided by the framework. They:
 * Encapsulate business logic and algorithms.
-* Coordinate models and views.
+* Coordinate [models](mvc/models.md) and views.
 * Respond to WordPress hooks or handle actions.
 
 ## Using Views Inside Controllers
 
-Controllers can render or return views via the built-in view helper:
+Controllers can render or return [views](mvc/views.md) via the built-in view helper:
 
 ```php title="app/Controlleres/MyController"
 class MyController extends Controller

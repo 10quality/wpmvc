@@ -1,5 +1,13 @@
 ---
 sidebar_position: 1
+title: Ayuco
+description: Learn how to use the WordPress MVC CLI (Ayuco) to generate plugins, themes, controllers, and models with automated scaffolding.
+keywords: [wordpress plugin generator, wordpress cli scaffolding, wordpress mvc cli, generate wordpress plugin mvc, wordpress scaffolding tool]
+---
+
+<head>
+  <title>WordPress MVC CLI (Ayuco) – Generate Plugins and Themes with Scaffolding</title>
+</head>
 ---
 
 # Ayuco
@@ -67,7 +75,7 @@ Variants:
 
 ### add
 
-Adds WordPress hooks (actions, filters, shortcodes) and wires them to controllers or views.
+Adds WordPress hooks (actions, filters, shortcodes) and wires them to [controllers](mvc/controllers.md) or [views](mvc/views.md).
 
 ```bash
 php ayuco add {object}:{name} {handler} [options]
@@ -87,7 +95,7 @@ Handler format: `Controller@method` or view path.
 
 ### create
 
-Generates files for models, views, controllers, and assets.
+Generates files for [models](mvc/models.md), views, controllers, and assets.
 
 ```bash
 php ayuco create {object}:{name} [params] [options]

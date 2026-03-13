@@ -12,7 +12,7 @@ While WordPress itself is hook-based and procedural, WPMVC layers MVC on top to 
 
 - **Model** — Handles data and business logic. Interacts with the database (WP posts, options, custom tables), performs validations, and provides methods to fetch/save data.
 - **View** — Responsible for presentation. Renders HTML/templates (PHP or Blade), displays data from Models, and includes minimal logic (loops, conditionals).
-- **Controller** — Acts as the middleman. Receives requests (via WP hooks, routes, shortcodes), fetches data via Models, prepares it, and passes it to Views for rendering.
+- **Controller** — Acts as the middleman. Receives requests (via WP hooks, routes, shortcodes), fetches data via [Models](mvc/models.md), prepares it, and passes it to [views](mvc/views.md) for rendering.
 
 ## How MVC Fits into WordPress
 
@@ -21,7 +21,7 @@ WPMVC adapts classic MVC to WP's ecosystem:
 - **Controllers** hook into WP (e.g., `add_action('init', ...)`), handle routing, and coordinate.
 - **Models** extend base classes that work with `$wpdb`, WP_Query, options API, users, terms, etc.
 - **Views** can be rendered in admin metaboxes, frontend templates, widgets, or via shortcodes.
-- **Assets** (CSS/JS) are enqueued via controllers or config.
+- **[Assets](resources/assets.md)** (CSS/JS) are enqueued via [controllers](mvc/controllers.md) or config.
 - **Add-ons** extend this pattern (e.g., metaboxes auto-generate from Models).
 
 ### Request Flow Example

@@ -1,10 +1,18 @@
 ---
 sidebar_position: 1
+title: Assets
+description: Learn how to manage assets in the WordPress MVC Framework (WPMVC), including CSS, JavaScript, images, and build tools for plugins and themes.
+keywords: [wordpress asset management, wordpress enqueue scripts mvc, wordpress plugin css js management, wordpress theme assets mvc, wordpress mvc assets]
+---
+
+<head>
+  <title>WordPress MVC Assets – Managing CSS, JS and Resources for Plugins and Themes</title>
+</head>
 ---
 
 # Assets
 
-Any front-end file, **non-PHP**, is considered an asset in the framework; JavaScript, CSS, SASS, SCSS, LESS, fonts, images and views (templates) are examples of asset files.
+Any front-end file, **non-PHP**, is considered an asset in the framework; JavaScript, CSS, SASS, SCSS, LESS, fonts, images and [views](mvc/views.md) (templates) are examples of asset files.
 
 ## Gulp
 

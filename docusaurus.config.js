@@ -9,7 +9,7 @@ import 'dotenv/config';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'WordPress MVC',
+  title: 'WordPress MVC framework (WPMVC)',
   tagline: 'The ultimate WordPress framework for custom Themes and Plugins development',
   favicon: 'img/favicon.ico',
 
@@ -65,6 +65,44 @@ const config = {
       }),
     ],
   ],
+  headTags: [
+    // Declare some json-ld structured data
+    {
+      tagName: 'script',
+      attributes: {
+        type: 'application/ld+json',
+      },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org/',
+        '@type': 'SoftwareApplication',
+        applicationCategory: 'Framework',
+        applicationSuite: 'WordPress',
+        downloadUrl: 'https://github.com/10quality/wpmvc',
+        featureList: 'MVC, Code Generation, CLI, WordPress',
+        softwareHelp: {
+          '@type': 'CreativeWork',
+          name: 'WordPress MVC Documentation',
+          url: 'https://10quality.github.io/wpmvc/docs/intro',
+        },
+        softwareRequirements: 'Requires WordPress 5.8 or higher, Composer, PHP 7.4 or higher, Node.js',
+        softwareVersion: '1.1.1',
+        accessMode: 'textual',
+        creator: {
+          '@type': 'Organization',
+          name: '10 Quality',
+          legalName: '10 Quality Studio S.R.L.',
+          address: 'San Jose, Costa Rica',
+          url: 'https://10quality.studio',
+        },
+        educationalLevel: 'intermediate',
+        name: 'WordPress MVC Framework',
+        description: 'WordPress MVC is a powerful framework that brings the Model-View-Controller (MVC) architecture to WordPress development. It provides a structured and organized way to build custom themes and plugins, making it easier for developers to create maintainable and scalable WordPress applications.',
+        url: 'https://10quality.github.io/wpmvc/',
+        logo: 'https://github.com/10quality/wpmvc/blob/gh-pages/static/img/wpmvc-icon.jpg',
+        image: 'https://github.com/10quality/wpmvc/blob/gh-pages/static/img/wpmvc-banner.jpg',
+      }),
+    },
+  ],
   themes: ['@easyops-cn/docusaurus-search-local'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -73,6 +111,8 @@ const config = {
       image: 'img/wpmvc-banner.jpg',
       metadata: [
         {name: 'keywords', content: 'wpmvc, mvcgenerator, wordpress, framework, plugin, theme, development'},
+        {name: "robots", content: "index, follow"},
+        {name: "google-site-verification", content: "google95c76bc0da66e5b0.html"},
       ],
       colorMode: {
         respectPrefersColorScheme: true,

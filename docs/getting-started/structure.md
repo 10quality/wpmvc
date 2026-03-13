@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # File Structure
 
-**WordPress MVC** (WPMVC) follows a clean, convention-based directory layout designed for maintainability, scalability, and separation of concerns. After installing via Composer and running the Ayuco setup wizard (`php ayuco setup`), your project (plugin or theme) will have the following typical structure.
+**WordPress MVC** (WPMVC) follows a clean, convention-based directory layout designed for maintainability, scalability, and separation of concerns. After installing via Composer and running the [Ayuco](cli/ayuco.md) setup wizard (`php ayuco setup`), your project (plugin or theme) will have the following typical structure.
 
 ```text
 my-awesome-plugin-or-theme/                 # Root folder (plugin folder name or theme folder)
