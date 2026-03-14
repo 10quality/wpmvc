@@ -36,3 +36,7 @@ https://github.com/10quality/skills --path=skills/wpmvc
 ```
 
 Ensure your AI agent environment supports skill installation commands. For alternative agents, check their documentation for similar installation methods (e.g., via npx or agent-specific CLI tools).
+
+## How to trigger the skill?
+
+To effectively trigger the skill, mention to your AI coding agent: "WordPress MVC", "WPMVC", or both.
